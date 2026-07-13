@@ -45,8 +45,8 @@
       </div>
       <div class="heroVisual">
         <div class="portraitFrame">
-          <img src="https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/01-home-english.png" alt="SmartStay AI Palestine interface">
-          <span class="portraitTag" data-i18n="hero.featured">FEATURED / SMARTSTAY AI</span>
+          <img src="hero-fullstack-v2.webp" alt="Abstract full-stack software architecture">
+          <span class="portraitTag" data-i18n="hero.featured">FULL-STACK / SYSTEMS</span>
         </div>
         <div class="availabilityCard">
           <span data-i18n="hero.focusLabel">Current focus</span>
@@ -110,6 +110,12 @@
   </main>
 
   <footer class="shell"><span>&copy; 2026 Kareem Swidan</span><span data-i18n="footer.location">Gaza, Palestine</span></footer>
-  <script src="app.js?v=2" defer></script>
+  <script>
+    fetch("hero-fullstack-v2.b64?v=1")
+      .then(response => response.ok ? response.text() : Promise.reject())
+      .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.trim(); })
+      .catch(() => {});
+  </script>
+  <script src="app.js?v=3" defer></script>
 </body>
 </html>
