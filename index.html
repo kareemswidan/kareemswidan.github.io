@@ -111,9 +111,9 @@
 
   <footer class="shell"><span>&copy; 2026 Kareem Swidan</span><span data-i18n="footer.location">Gaza, Palestine</span></footer>
   <script>
-    fetch("hero-fullstack-v2.b64?v=1")
+    fetch("hero-fullstack-v2.b64?v=2")
       .then(response => response.ok ? response.text() : Promise.reject())
-      .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.trim(); })
+      .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.replace(/\s/g, ""); })
       .catch(() => {});
   </script>
   <script src="app.js?v=3" defer></script>
