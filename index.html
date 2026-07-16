@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
   <style>.portraitFrame img{width:100%;height:100%;object-fit:cover;object-position:center top;inset:0;filter:saturate(.9) contrast(1.02)}</style>
 </head>
 <body>
@@ -22,6 +23,9 @@
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="navActions">
+        <button id="themeToggle" class="themeToggle" type="button" aria-label="Switch to dark mode">
+          <span id="themeIcon" aria-hidden="true">◐</span><strong id="themeLabel">Dark</strong>
+        </button>
         <button id="languageToggle" class="languageToggle" type="button" aria-label="Switch to Arabic">
           <span aria-hidden="true">◎</span><strong id="languageLabel">العربية</strong>
         </button>
@@ -40,7 +44,7 @@
         <p class="heroLead" data-i18n="hero.lead">I design and build bilingual digital products from responsive interfaces to secure APIs and relational databases.</p>
         <div class="heroActions">
           <a class="button primary" href="#projects" data-i18n="hero.work">Explore my projects</a>
-          <a class="button ghost" href="cv.html" target="_blank" rel="noreferrer" data-i18n="hero.cv">Open CV</a>
+          <a class="button ghost" href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cv">Open / Download CV</a>
         </div>
       </div>
       <div class="heroVisual">
@@ -116,6 +120,6 @@
       .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.replace(/\s/g, ""); })
       .catch(() => {});
   </script>
-  <script src="app.js?v=6" defer></script>
+  <script src="app.js?v=7" defer></script>
 </body>
 </html>
