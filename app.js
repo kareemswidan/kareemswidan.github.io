@@ -68,6 +68,7 @@ function updateThemeControl(){
 
 function renderProjects(language){
   const grid=document.getElementById("projectsGrid");
+  const caseStudySlugs=["smartstay","velora","nexora","lexiguard","dozo","electrical"];
   const words=language==="ar"?{live:"فتح المشروع الكامل",source:"عرض الكود",pending:"يحتاج استضافة Backend","available":"نسخة عامة كاملة متاحة"}:{live:"Open full application",source:"View source",pending:"Backend hosting required",available:"Complete public deployment available"};
   grid.innerHTML=projects.map((project,index)=>`
     <article class="projectCard">
@@ -79,6 +80,7 @@ function renderProjects(language){
         <div class="projectTags">${project.tags.map(tag=>`<span>${tag}</span>`).join("")}</div>
         <p class="projectStatus ${project.live?"live":""}"><span></span>${project.live?words.available:words.pending}</p>
         <div class="projectActions">
+          <a class="caseAction" href="case-studies/${caseStudySlugs[index]}/">${language==="ar"?"دراسة الحالة":"Case study"}</a>
           ${project.live?`<a class="liveAction" href="${project.live}" target="_blank" rel="noreferrer">${words.live}</a>`:`<span class="disabledAction" aria-disabled="true">${words.pending}</span>`}
           <a class="sourceAction" href="${project.repo}" target="_blank" rel="noreferrer">${words.source}</a>
         </div>

@@ -1,0 +1,2 @@
+.projectActions a.caseAction{border:1px solid var(--ink);background:var(--lime);color:#0c1410}
+:root[data-theme="dark"] .projectActions a.caseAction{border-color:var(--lime);background:var(--lime);color:#09110d}

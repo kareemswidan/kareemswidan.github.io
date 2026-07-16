@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="case-card.css">
   <style>.portraitFrame img{width:100%;height:100%;object-fit:cover;object-position:center top;inset:0;filter:saturate(.9) contrast(1.02)}</style>
 </head>
 <body>
@@ -120,6 +121,6 @@
       .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.replace(/\s/g, ""); })
       .catch(() => {});
   </script>
-  <script src="app.js?v=7" defer></script>
+  <script src="app.js?v=8" defer></script>
 </body>
 </html>
