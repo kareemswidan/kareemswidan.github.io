@@ -17,7 +17,7 @@ const studies = {
       ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/12-owner-dashboard.png", pair("Property-owner dashboard", "لوحة مالك العقار")],
       ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/16-admin-dashboard.png", pair("Administration dashboard", "لوحة الإدارة")]
     ],
-    live: "https://kareem-smartstay-ai.kareemswidan2002.chatgpt.site/",
+    live: "https://smartstay-palestine.kareemswidan11.workers.dev/",
     repo: "https://github.com/kareemswidan/smartstay-ai-palestine",
     problem: pair(
       "Local accommodation discovery is fragmented across social pages and messages. Guests cannot reliably verify availability, while hosts need professional listings, inventory control, and a clear approval workflow.",
@@ -30,14 +30,14 @@ const studies = {
     stack: [
       ["Next.js + TypeScript", pair("One typed codebase for public pages, dashboards, and route handlers.", "قاعدة كود واحدة ومكتوبة الأنواع للصفحات واللوحات وواجهات الخادم.")],
       ["Cloudflare D1 + Drizzle", pair("Relational ownership and booking data with explicit schema and migrations.", "بيانات علائقية للملكية والحجوزات مع مخطط وترحيلات واضحة.")],
-      ["Cloudflare R2", pair("Property images are stored separately from transactional records.", "حفظ صور العقارات منفصلة عن السجلات والمعاملات.")],
+      ["Cloudflare Workers", pair("The complete Next.js application runs publicly at the edge with its server routes and role-aware workflows.", "يعمل تطبيق Next.js الكامل علنًا على الحافة مع مسارات الخادم وتدفقات الصلاحيات حسب الدور.")],
       ["Local AI", pair("Useful trip-planning assistance without making the core booking flow depend on a paid API.", "مساعدة مفيدة في تخطيط الرحلة دون ربط الحجز الأساسي بواجهة مدفوعة.")]
     ],
     architecture: [
       [pair("Interface", "الواجهة"), pair("Bilingual pages and role dashboards", "صفحات ثنائية اللغة ولوحات حسب الدور")],
       [pair("API", "الخادم"), pair("Auth, properties, uploads, bookings", "الحسابات والعقارات والرفع والحجوزات")],
       [pair("Data", "البيانات"), pair("D1 relational model and unique slots", "نموذج D1 وقيود المواعيد الفريدة")],
-      [pair("Storage", "التخزين"), pair("R2 property media", "صور العقارات في R2")]
+      [pair("Storage", "التخزين"), pair("D1-backed property media", "صور العقارات محفوظة عبر D1")]
     ],
     challenges: [
       [pair("Double booking", "الحجز المزدوج"), pair("Availability checks alone can race. Each booked time becomes a unique database slot; a collision returns HTTP 409 and the incomplete booking is removed.", "فحص التوفر وحده قد يتعارض مع طلب متزامن. لذلك يصبح كل وقت محجوز سجلًا فريدًا في قاعدة البيانات؛ وعند التصادم يعاد 409 ويحذف الحجز غير المكتمل.")],
@@ -51,9 +51,9 @@ const studies = {
       pair("Architecture and authorization documents explain the schema, sessions, roles, uploads, and booking constraints.", "يوضح توثيق المعمارية والصلاحيات المخطط والجلسات والأدوار والرفع وقيود الحجز.")
     ],
     demos: [
-      ["Customer", "customer@smartstay.ps", "Customer2026!"],
-      ["Owner", "owner@smartstay.ps", "Owner2026!"],
-      ["Admin", "admin@smartstay.ps", "Admin2026!"]
+      ["Guest", "guest@smartstay.ps", "Guest123!"],
+      ["Owner", "owner@smartstay.ps", "Owner123!"],
+      ["Admin", "admin@smartstay.ps", "Admin123!"]
     ]
   },
   velora: {
