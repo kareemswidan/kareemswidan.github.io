@@ -105,6 +105,9 @@ test("interactive portfolio layer includes the eight requested premium upgrades"
   assert.match(home, /name="name"/);
   assert.match(home, /name="email"/);
   assert.match(home, /name="message"/);
+  assert.match(home, /<span data-i18n="contact\.send">Send message<\/span>/);
+  assert.match(home, /bi-send/);
+  assert.doesNotMatch(home, /Continue in WhatsApp/);
   assert.match(app, /setupContactForm/);
   assert.match(app, /wa\.me\/972598934925\?text=/);
 
@@ -160,4 +163,6 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(robots, /Sitemap:/);
   assert.match(sitemap, /case-studies\/lexiguard/);
   assert.match(manifest, /Kareem Swidan/);
+  assert.match(home, /<link rel="canonical" href="https:\/\/kareemswidan\.github\.io\/">/);
+  assert.doesNotMatch(home + robots + sitemap, /github\.io\/kareem-swidan-portfolio/);
 });
