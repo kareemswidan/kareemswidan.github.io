@@ -24,14 +24,14 @@ test("world-class upgrade ships all eight portfolio improvements", async () => {
     read("index.html"),
     read("app.js"),
     read("style.css"),
-    stat(new URL("media/kareem-swidan-showreel-v4.mp4", root))
+    stat(new URL("media/kareem-swidan-showreel-v5.mp4", root))
   ]);
-  await access(new URL("media/kareem-swidan-showreel-v4-poster.jpg", root));
-  await access(new URL("media/kareem-swidan-showreel-v4.ar.vtt", root));
+  await access(new URL("media/kareem-swidan-showreel-v5-poster.jpg", root));
   assert.ok(video.size > 1_000_000, "portfolio story should be a real encoded video");
   assert.match(home, /id="storyDialog"/);
-  assert.match(home, /srclang="ar"/);
-  assert.match(home, /1080p · 60fps/);
+  // Arabic is burned into the frame; a same-language <track> would double every line
+  assert.doesNotMatch(home, /<track[^>]*srclang="ar"/);
+  assert.match(home, /<b>1080p<\/b>/);
   assert.match(home, /id="about"/);
   assert.match(home, /class="credibilityRail"/);
   assert.match(home, /class="hireFacts"/);
