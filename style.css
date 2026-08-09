@@ -227,7 +227,7 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
   transform: rotate(4deg);
 }
 .portraitCard { position: relative; overflow: hidden; border: 1px solid color-mix(in srgb, var(--line) 72%, transparent); border-radius: var(--radius-lg); background: var(--deep); box-shadow: var(--shadow); }
-.portraitTopline { height: 45px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; color: #a8b7b3; font: 600 9px/1.2 ui-monospace, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.portraitTopline { height: 45px; display: flex; align-items: center; justify-content: flex-end; padding: 0 16px; color: #a8b7b3; font: 600 9px/1.2 ui-monospace, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .portraitCard img { width: 100%; aspect-ratio: 4 / 4.5; display: block; object-fit: cover; object-position: center 21%; filter: saturate(.86) contrast(1.02); transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .5s; }
 .portraitCard:hover img { transform: scale(1.025); filter: saturate(1) contrast(1.01); }
 .portraitCaption { min-height: 75px; display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 15px 17px 17px; color: var(--on-deep); }
@@ -322,7 +322,7 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .projectCard:focus-within { transform: translateY(-10px); border-color: color-mix(in srgb, var(--accent) 68%, var(--line)); box-shadow: 0 32px 78px rgba(9,37,33,.18); }
 .projectMedia { position: relative; height: 275px; display: block; overflow: hidden; background: var(--accent-soft); }
 .projectMedia::after { content: ""; position: absolute; inset: auto 0 0; height: 35%; background: linear-gradient(transparent, rgba(5, 18, 16, .28)); pointer-events: none; }
-.projectMedia img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top; transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .35s; }
+.projectMedia img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .35s; }
 .projectCard:hover .projectMedia img,
 .projectCard:focus-within .projectMedia img { transform: translate(var(--media-x, 0), var(--media-y, 0)) scale(1.075); filter: saturate(1.12) contrast(1.02); }
 .projectMediaIcon { position: absolute; right: 15px; bottom: 15px; z-index: 2; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.92); color: #10201f; transition: transform .3s; }
