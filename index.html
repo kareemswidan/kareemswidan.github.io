@@ -70,6 +70,7 @@
       </a>
 
       <div class="navLinks" id="navLinks">
+        <a href="#about" data-i18n="nav.about">About</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
@@ -105,6 +106,7 @@
         <p class="heroLead" data-i18n="hero.lead">I turn ideas into reliable bilingual web products—from polished interfaces to secure APIs, databases and cloud deployment.</p>
         <div class="heroActions">
           <a class="button primary" href="#projects"><span data-i18n="hero.work">View selected work</span><i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+          <button class="button storyButton" id="storyOpen" type="button"><i class="bi bi-play-fill" aria-hidden="true"></i><span data-i18n="hero.story">Watch my 60-second story</span></button>
           <a class="button ghost" href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer"><i class="bi bi-file-earmark-person" aria-hidden="true"></i><span data-i18n="hero.cv">View my CV</span></a>
         </div>
         <div class="socialRow" aria-label="Social profiles" data-i18n-aria="aria.socialProfiles">
@@ -130,20 +132,35 @@
       </div>
     </section>
 
-    <section class="metrics shell" aria-label="Profile highlights" data-i18n-aria="aria.profileHighlights" data-reveal>
-      <div><strong>06</strong><span data-i18n="metrics.projects">Public projects</span></div>
-      <div><strong>180h</strong><span data-i18n="metrics.training">Industry training</span></div>
+    <section class="metrics proofStrip shell" aria-label="Profile highlights" data-i18n-aria="aria.profileHighlights" data-reveal>
+      <div><strong data-count="6">06</strong><span data-i18n="metrics.projects">Live projects</span></div>
+      <div><strong data-count="33">33</strong><span data-i18n="metrics.tests">Automated checks</span></div>
       <div><strong>AR / EN</strong><span data-i18n="metrics.bilingual">Bilingual products</span></div>
-      <div><strong>2025</strong><span data-i18n="metrics.graduate">Applied IT graduate</span></div>
+      <div><strong>RTL / LTR</strong><span data-i18n="metrics.directions">Native directions</span></div>
+      <div><strong>CI</strong><span data-i18n="metrics.ci">Verified builds</span></div>
+      <div><strong>Cloud</strong><span data-i18n="metrics.cloud">Production deployment</span></div>
+    </section>
+
+    <section class="section shell aboutSection" id="about">
+      <div class="aboutStatement" data-reveal>
+        <p class="sectionIndex">01 — <span data-i18n="about.label">Product mindset</span></p>
+        <h2 data-i18n="about.title">I care about the whole product,<br>not only the code.</h2>
+        <p data-i18n="about.text">I work from the user's problem to the production release. I value clear decisions, honest collaboration and interfaces that feel simple because the engineering underneath is deliberate.</p>
+      </div>
+      <div class="principlesGrid">
+        <article data-reveal><span>01</span><h3 data-i18n="about.principleOneTitle">Understand first</h3><p data-i18n="about.principleOneText">Define the real user and business problem before choosing a stack.</p></article>
+        <article data-reveal><span>02</span><h3 data-i18n="about.principleTwoTitle">Build end to end</h3><p data-i18n="about.principleTwoText">Connect interface, API, data, permissions and deployment as one product.</p></article>
+        <article data-reveal><span>03</span><h3 data-i18n="about.principleThreeTitle">Prove the work</h3><p data-i18n="about.principleThreeText">Use tests, live demos and documented decisions instead of unsupported claims.</p></article>
+      </div>
     </section>
 
     <section class="section shell" id="projects">
       <div class="sectionHeader" data-reveal>
         <div>
-          <p class="sectionIndex">01 — <span data-i18n="projects.label">Selected work</span></p>
+          <p class="sectionIndex">02 — <span data-i18n="projects.label">Selected work</span></p>
           <h2 data-i18n="projects.title">Products built to work,<br>not just to look good.</h2>
         </div>
-        <p data-i18n="projects.description">Six public projects spanning marketplaces, AI tools and responsive business experiences—with live demos, source code and engineering case studies.</p>
+          <p data-i18n="projects.description">Three flagship products lead the story, followed by three focused builds—with live demos, source code, measurable results and engineering case studies.</p>
       </div>
       <div id="projectsGrid" class="projectsGrid" aria-live="polite"></div>
     </section>
@@ -152,7 +169,7 @@
       <div class="section shell">
         <div class="sectionHeader light" data-reveal>
           <div>
-            <p class="sectionIndex">02 — <span data-i18n="expertise.label">What I do</span></p>
+            <p class="sectionIndex">03 — <span data-i18n="expertise.label">What I do</span></p>
             <h2 data-i18n="expertise.title">One developer.<br>A complete product view.</h2>
           </div>
           <p data-i18n="expertise.description">I combine product thinking with hands-on implementation across interfaces, back-end systems, data and deployment.</p>
@@ -169,7 +186,7 @@
     <section class="section shell" id="experience">
       <div class="sectionHeader compact" data-reveal>
         <div>
-          <p class="sectionIndex">03 — <span data-i18n="experience.label">Journey</span></p>
+          <p class="sectionIndex">04 — <span data-i18n="experience.label">Journey</span></p>
           <h2 data-i18n="experience.title">Learning by building<br>real systems.</h2>
         </div>
       </div>
@@ -184,7 +201,7 @@
       <div class="section shell">
         <div class="sectionHeader light" data-reveal>
           <div>
-            <p class="sectionIndex">04 — <span data-i18n="proof.label">Professional proof</span></p>
+            <p class="sectionIndex">05 — <span data-i18n="proof.label">Professional proof</span></p>
             <h2 data-i18n="proof.title">Evidence beyond<br>the interface.</h2>
           </div>
           <p data-i18n="proof.description">Working software, automated checks and an academic recommendation make the work easy to evaluate.</p>
@@ -223,15 +240,30 @@
             </ul>
           </article>
         </div>
+
+        <div class="credibilityRail" aria-label="Verified professional references" data-i18n-aria="aria.verifiedReferences">
+          <article data-reveal><i class="bi bi-mortarboard" aria-hidden="true"></i><div><strong data-i18n="proof.credentialAcademic">Academic recommendation</strong><span data-i18n="proof.credentialAcademicText">Signed recommendation from Dr. Abdelrafe Elzamly</span></div></article>
+          <article data-reveal><i class="bi bi-people" aria-hidden="true"></i><div><strong data-i18n="proof.credentialTeam">Team product experience</strong><span data-i18n="proof.credentialTeamText">Full-Stack contribution within the SmartStay graduation team</span></div></article>
+          <article data-reveal><i class="bi bi-building-check" aria-hidden="true"></i><div><strong data-i18n="proof.credentialIndustry">Industry training</strong><span data-i18n="proof.credentialIndustryText">180 hours with the Electricity Company development team</span></div></article>
+        </div>
       </div>
     </section>
 
     <section class="contactSection shell" id="contact" data-reveal>
       <div class="contactCopy">
-        <p class="sectionIndex">05 — <span data-i18n="contact.label">Contact</span></p>
+        <p class="sectionIndex">06 — <span data-i18n="contact.label">Contact</span></p>
         <h2 data-i18n="contact.title">Let's build something useful.</h2>
         <p data-i18n="contact.text">Available for Full-Stack Developer opportunities and selected freelance projects worldwide.</p>
+        <div class="hireFacts" aria-label="Availability details" data-i18n-aria="aria.availabilityDetails">
+          <span><i class="bi bi-globe2" aria-hidden="true"></i><b data-i18n="contact.remote">Remote worldwide</b></span>
+          <span><i class="bi bi-translate" aria-hidden="true"></i><b data-i18n="contact.languages">Arabic and English</b></span>
+          <span><i class="bi bi-code-square" aria-hidden="true"></i><b data-i18n="contact.role">Full-Stack roles</b></span>
+        </div>
         <a class="emailLink" href="mailto:kareemswidan11@gmail.com">kareemswidan11@gmail.com <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <div class="hireActions">
+          <a href="mailto:kareemswidan11@gmail.com?subject=Full-Stack%20opportunity%20for%20Kareem" class="button hirePrimary"><span data-i18n="contact.hire">Hire Kareem</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer" class="button hireGhost"><span data-i18n="contact.download">Download CV</span><i class="bi bi-download" aria-hidden="true"></i></a>
+        </div>
       </div>
       <div class="contactLinks" aria-label="Contact links" data-i18n-aria="aria.contactLinks">
         <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
@@ -242,12 +274,25 @@
     </section>
   </main>
 
+  <dialog class="storyDialog" id="storyDialog" aria-labelledby="storyTitle">
+    <div class="storyDialogTop">
+      <div><p data-i18n="story.eyebrow">60-second portfolio story</p><h2 id="storyTitle" data-i18n="story.title">From an idea to a working product.</h2></div>
+      <button id="storyClose" type="button" aria-label="Close video" data-i18n-aria="aria.closeVideo"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    </div>
+    <video id="storyVideo" controls preload="metadata" poster="media/kareem-swidan-story-poster.jpg">
+      <source src="media/kareem-swidan-story.mp4" type="video/mp4">
+      <track kind="captions" srclang="en" label="English" src="media/kareem-swidan-story.en.vtt">
+      <p data-i18n="story.fallback">Your browser does not support the portfolio video.</p>
+    </video>
+    <div class="storyMeta"><span><i class="bi bi-mic" aria-hidden="true"></i><b data-i18n="story.voice">Arabic voiceover</b></span><span><i class="bi bi-badge-cc" aria-hidden="true"></i><b data-i18n="story.captions">English kinetic captions</b></span><span><i class="bi bi-badge-hd" aria-hidden="true"></i><b>1080p</b></span></div>
+  </dialog>
+
   <footer class="shell">
     <span>&copy; 2026 Kareem Swidan</span>
     <span data-i18n="footer.note">Designed with care. Built with code.</span>
     <a href="#top" data-i18n="footer.back">Back to top ↑</a>
   </footer>
 
-  <script src="app.js?v=11" defer></script>
+  <script src="app.js?v=12" defer></script>
 </body>
 </html>

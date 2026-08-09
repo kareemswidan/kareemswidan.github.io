@@ -1,25 +1,27 @@
 const translations = {
   en: {
-    "aria.primaryNav":"Primary navigation","aria.socialProfiles":"Social profiles","aria.profileHighlights":"Profile highlights","aria.testResults":"Automated test results","aria.contactLinks":"Contact links",
-    "nav.projects":"Projects","nav.expertise":"Expertise","nav.experience":"Experience","nav.proof":"Proof","nav.contact":"Contact","nav.talk":"Let's talk",
-    "hero.status":"Available for remote opportunities","hero.intro":"Hello, I'm Kareem","hero.name":"Full-Stack Developer<br><em>with a product mindset.</em>","hero.role":"Full-Stack Developer","hero.lead":"I turn ideas into reliable bilingual web products—from polished interfaces to secure APIs, databases and cloud deployment.","hero.work":"View selected work","hero.cv":"View my CV","hero.follow":"Find me online","hero.location":"Gaza, Palestine","hero.remote":"Remote ready",
-    "metrics.projects":"Public projects","metrics.training":"Industry training","metrics.bilingual":"Bilingual products","metrics.graduate":"Applied IT graduate",
-    "projects.label":"Selected work","projects.title":"Products built to work,<br>not just to look good.","projects.description":"Six public projects spanning marketplaces, AI tools and responsive business experiences—with live demos, source code and engineering case studies.",
+    "aria.primaryNav":"Primary navigation","aria.socialProfiles":"Social profiles","aria.profileHighlights":"Profile highlights","aria.testResults":"Automated test results","aria.contactLinks":"Contact links","aria.verifiedReferences":"Verified professional references","aria.availabilityDetails":"Availability details","aria.closeVideo":"Close video",
+    "nav.about":"About","nav.projects":"Projects","nav.expertise":"Expertise","nav.experience":"Experience","nav.proof":"Proof","nav.contact":"Contact","nav.talk":"Let's talk",
+    "hero.status":"Available for remote opportunities","hero.intro":"Hello, I'm Kareem","hero.name":"Full-Stack Developer<br><em>with a product mindset.</em>","hero.role":"Full-Stack Developer","hero.lead":"I turn ideas into reliable bilingual web products—from polished interfaces to secure APIs, databases and cloud deployment.","hero.work":"View selected work","hero.story":"Watch my 60-second story","hero.cv":"View my CV","hero.follow":"Find me online","hero.location":"Gaza, Palestine","hero.remote":"Remote ready",
+    "metrics.projects":"Live projects","metrics.tests":"Automated checks","metrics.bilingual":"Bilingual products","metrics.directions":"Native directions","metrics.ci":"Verified builds","metrics.cloud":"Production deployment",
+    "about.label":"Product mindset","about.title":"I care about the whole product,<br>not only the code.","about.text":"I work from the user's problem to the production release. I value clear decisions, honest collaboration and interfaces that feel simple because the engineering underneath is deliberate.","about.principleOneTitle":"Understand first","about.principleOneText":"Define the real user and business problem before choosing a stack.","about.principleTwoTitle":"Build end to end","about.principleTwoText":"Connect interface, API, data, permissions and deployment as one product.","about.principleThreeTitle":"Prove the work","about.principleThreeText":"Use tests, live demos and documented decisions instead of unsupported claims.",
+    "projects.label":"Selected work","projects.title":"Products built to work,<br>not just to look good.","projects.description":"Three flagship products lead the story, followed by three focused builds—with live demos, source code, measurable results and engineering case studies.",
     "expertise.label":"What I do","expertise.title":"One developer.<br>A complete product view.","expertise.description":"I combine product thinking with hands-on implementation across interfaces, back-end systems, data and deployment.","expertise.frontendTitle":"Interface engineering","expertise.frontendText":"React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.","expertise.backendTitle":"Back-end systems","expertise.backendText":"Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.","expertise.dataTitle":"Data and cloud","expertise.dataText":"MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.","expertise.deliveryTitle":"Product delivery","expertise.deliveryText":"Testing, Git collaboration, documentation, performance, SEO and production-minded delivery.",
     "experience.label":"Journey","experience.title":"Learning by building<br>real systems.","experience.degreeType":"Bachelor's Degree — Final grade 81.7%","experience.degreeTitle":"Applied Information Technology","experience.degreeText":"Al-Aqsa University, College of Computer & Information Technology. Graduation project: SmartStay AI Palestine.","experience.internType":"Web Development Intern — 180 hours","experience.internTitle":"Electricity Company, Khan Younis","experience.internText":"Worked within a development team on an internal database-backed web system, responsive interfaces, functional testing and issue resolution.","experience.trainingType":"Professional development","experience.trainingTitle":"Web Development and Freelancing","experience.trainingText":"Focused training in web development, entrepreneurship, client communication and project delivery.",
-    "proof.label":"Professional proof","proof.title":"Evidence beyond<br>the interface.","proof.description":"Working software, automated checks and an academic recommendation make the work easy to evaluate.","proof.recommendationLabel":"Academic recommendation · October 2025","proof.quote":"Kareem demonstrated responsibility, a positive attitude, strong academic performance and consistent commitment throughout his studies.","proof.recommenderRole":"Department of Computer & Information Sciences, Al-Aqsa University","proof.qualityLabel":"Verified quality","proof.qualityTitle":"33 automated checks passing","proof.qualityText":"Validated locally on the latest project versions, including production builds where applicable.","proof.availabilityLabel":"Open to opportunities","proof.availabilityTitle":"Available worldwide","proof.fulltime":"Full-time roles","proof.remote":"Remote opportunities","proof.freelance":"Selected freelance projects","proof.languages":"Arabic and English products",
-    "contact.label":"Contact","contact.title":"Let's build something useful.","contact.text":"Available for Full-Stack Developer opportunities and selected freelance projects worldwide.","footer.note":"Designed with care. Built with code.","footer.back":"Back to top ↑"
+    "proof.label":"Professional proof","proof.title":"Evidence beyond<br>the interface.","proof.description":"Working software, automated checks and verified professional evidence make the work easy to evaluate.","proof.recommendationLabel":"Academic recommendation · October 2025","proof.quote":"Kareem demonstrated responsibility, a positive attitude, strong academic performance and consistent commitment throughout his studies.","proof.recommenderRole":"Department of Computer & Information Sciences, Al-Aqsa University","proof.qualityLabel":"Verified quality","proof.qualityTitle":"33 automated checks passing","proof.qualityText":"Validated locally on the latest project versions, including production builds where applicable.","proof.availabilityLabel":"Open to opportunities","proof.availabilityTitle":"Available worldwide","proof.fulltime":"Full-time roles","proof.remote":"Remote opportunities","proof.freelance":"Selected freelance projects","proof.languages":"Arabic and English products","proof.credentialAcademic":"Academic recommendation","proof.credentialAcademicText":"Signed recommendation from Dr. Abdelrafe Elzamly","proof.credentialTeam":"Team product experience","proof.credentialTeamText":"Full-Stack contribution within the SmartStay graduation team","proof.credentialIndustry":"Industry training","proof.credentialIndustryText":"180 hours with the Electricity Company development team",
+    "contact.label":"Contact","contact.title":"Let's build something useful.","contact.text":"Available for Full-Stack Developer opportunities and selected freelance projects worldwide.","contact.remote":"Remote worldwide","contact.languages":"Arabic and English","contact.role":"Full-Stack roles","contact.hire":"Hire Kareem","contact.download":"Download CV","story.eyebrow":"60-second portfolio story","story.title":"From an idea to a working product.","story.fallback":"Your browser does not support the portfolio video.","story.voice":"Arabic voiceover","story.captions":"English kinetic captions","footer.note":"Designed with care. Built with code.","footer.back":"Back to top ↑"
   },
   ar: {
-    "aria.primaryNav":"التنقل الرئيسي","aria.socialProfiles":"الحسابات الاجتماعية","aria.profileHighlights":"أبرز معلومات الملف المهني","aria.testResults":"نتائج الاختبارات الآلية","aria.contactLinks":"روابط التواصل",
-    "nav.projects":"المشاريع","nav.expertise":"الخبرات","nav.experience":"المسيرة","nav.proof":"الدليل","nav.contact":"تواصل","nav.talk":"تواصل معي",
-    "hero.status":"متاح لفرص العمل عن بُعد","hero.intro":"مرحبًا، أنا كريم","hero.name":"مطوّر فل ستاك<br><em>بعقلية بناء المنتجات.</em>","hero.role":"مطوّر فل ستاك","hero.lead":"أحوّل الأفكار إلى منتجات ويب ثنائية اللغة وموثوقة، من الواجهات المصقولة إلى واجهات البرمجة الآمنة وقواعد البيانات والنشر السحابي.","hero.work":"استعرض أعمالي","hero.cv":"عرض سيرتي الذاتية","hero.follow":"تجدني هنا","hero.location":"غزة، فلسطين","hero.remote":"جاهز للعمل عن بُعد",
-    "metrics.projects":"مشاريع عامة","metrics.training":"تدريب عملي","metrics.bilingual":"منتجات ثنائية اللغة","metrics.graduate":"خريج تكنولوجيا معلومات تطبيقية",
-    "projects.label":"أعمال مختارة","projects.title":"منتجات صُممت لتعمل،<br>لا لتبدو جميلة فقط.","projects.description":"ستة مشاريع عامة تشمل المنصات وأدوات الذكاء الاصطناعي وتجارب الأعمال المتجاوبة، مع نسخ تشغيل وكود ودراسات حالة هندسية.",
+    "aria.primaryNav":"التنقل الرئيسي","aria.socialProfiles":"الحسابات الاجتماعية","aria.profileHighlights":"أبرز معلومات الملف المهني","aria.testResults":"نتائج الاختبارات الآلية","aria.contactLinks":"روابط التواصل","aria.verifiedReferences":"المراجع المهنية الموثقة","aria.availabilityDetails":"تفاصيل التوفر","aria.closeVideo":"إغلاق الفيديو",
+    "nav.about":"عني","nav.projects":"المشاريع","nav.expertise":"الخبرات","nav.experience":"المسيرة","nav.proof":"الدليل","nav.contact":"تواصل","nav.talk":"تواصل معي",
+    "hero.status":"متاح لفرص العمل عن بُعد","hero.intro":"مرحبًا، أنا كريم","hero.name":"مطوّر فل ستاك<br><em>بعقلية بناء المنتجات.</em>","hero.role":"مطوّر فل ستاك","hero.lead":"أحوّل الأفكار إلى منتجات ويب ثنائية اللغة وموثوقة، من الواجهات المصقولة إلى واجهات البرمجة الآمنة وقواعد البيانات والنشر السحابي.","hero.work":"استعرض أعمالي","hero.story":"شاهد قصتي في 60 ثانية","hero.cv":"عرض سيرتي الذاتية","hero.follow":"تجدني هنا","hero.location":"غزة، فلسطين","hero.remote":"جاهز للعمل عن بُعد",
+    "metrics.projects":"مشاريع منشورة","metrics.tests":"اختبارات آلية","metrics.bilingual":"منتجات ثنائية اللغة","metrics.directions":"اتجاهات أصلية","metrics.ci":"بناء متحقق","metrics.cloud":"نشر إنتاجي سحابي",
+    "about.label":"عقلية المنتج","about.title":"أهتم بالمنتج كاملًا،<br>وليس بالكود وحده.","about.text":"أعمل من مشكلة المستخدم حتى إصدار المنتج. أقدّر القرارات الواضحة والتعاون الصادق والواجهات التي تبدو بسيطة لأن الهندسة خلفها مدروسة.","about.principleOneTitle":"الفهم أولًا","about.principleOneText":"أحدد مشكلة المستخدم والعمل الحقيقية قبل اختيار التقنيات.","about.principleTwoTitle":"بناء متكامل","about.principleTwoText":"أربط الواجهة وواجهة البرمجة والبيانات والصلاحيات والنشر في منتج واحد.","about.principleThreeTitle":"إثبات العمل","about.principleThreeText":"أعتمد على الاختبارات والنسخ الحية والقرارات الموثقة بدل الادعاءات.",
+    "projects.label":"أعمال مختارة","projects.title":"منتجات صُممت لتعمل،<br>لا لتبدو جميلة فقط.","projects.description":"تقود ثلاثة منتجات رئيسية القصة، ثم ثلاثة مشاريع مركزة، مع نسخ تشغيل وكود ونتائج قابلة للقياس ودراسات حالة هندسية.",
     "expertise.label":"ما الذي أقدمه","expertise.title":"مطوّر واحد.<br>رؤية متكاملة للمنتج.","expertise.description":"أجمع بين التفكير في المنتج والتنفيذ العملي في الواجهات وأنظمة الخادم والبيانات والنشر.","expertise.frontendTitle":"هندسة الواجهات","expertise.frontendText":"React وNext.js وTypeScript، تصميم متجاوب، سهولة وصول وتجارب عربية وإنجليزية باتجاهي RTL وLTR.","expertise.backendTitle":"أنظمة الخادم","expertise.backendText":"Node.js وExpress وLaravel وREST APIs، صلاحيات حسب الدور، جلسات آمنة والتحقق من البيانات.","expertise.dataTitle":"البيانات والسحابة","expertise.dataText":"MySQL وPostgreSQL وSQLite وCloudflare D1/R2 وPrisma وDrizzle وتدفقات بيانات موثوقة.","expertise.deliveryTitle":"تسليم المنتج","expertise.deliveryText":"اختبارات وتعاون باستخدام Git وتوثيق وأداء وتحسين لمحركات البحث وتسليم جاهز للإنتاج.",
     "experience.label":"المسيرة","experience.title":"أتعلّم ببناء<br>أنظمة حقيقية.","experience.degreeType":"درجة البكالوريوس — المعدل النهائي 81.7%","experience.degreeTitle":"تكنولوجيا المعلومات التطبيقية","experience.degreeText":"جامعة الأقصى، كلية الحاسبات وتكنولوجيا المعلومات. مشروع التخرج: SmartStay AI Palestine.","experience.internType":"متدرب تطوير ويب — 180 ساعة","experience.internTitle":"شركة الكهرباء، خان يونس","experience.internText":"عملت ضمن فريق تطوير على نظام ويب داخلي يعتمد على قاعدة بيانات، وشاركت في الواجهات المتجاوبة والاختبار الوظيفي وحل المشكلات.","experience.trainingType":"تطوير مهني","experience.trainingTitle":"تطوير الويب والعمل الحر","experience.trainingText":"تدريب مركز في تطوير الويب وريادة الأعمال والتواصل مع العملاء وتسليم المشاريع.",
-    "proof.label":"أدلة مهنية","proof.title":"أدلة تتجاوز<br>جمال الواجهة.","proof.description":"برمجيات تعمل واختبارات آلية وتوصية أكاديمية تجعل تقييم عملي واضحًا وسهلًا.","proof.recommendationLabel":"توصية أكاديمية · أكتوبر 2025","proof.quote":"أظهر كريم مسؤولية وروحًا إيجابية وأداءً أكاديميًا قويًا والتزامًا مستمرًا طوال فترة دراسته.","proof.recommenderRole":"قسم علوم الحاسوب والمعلومات، جامعة الأقصى","proof.qualityLabel":"جودة موثقة","proof.qualityTitle":"نجاح 33 اختبارًا آليًا","proof.qualityText":"تم التحقق محليًا من أحدث نسخ المشاريع، بما في ذلك بناء الإنتاج حيث ينطبق.","proof.availabilityLabel":"متاح للفرص","proof.availabilityTitle":"متاح للعمل عالميًا","proof.fulltime":"وظائف بدوام كامل","proof.remote":"فرص عمل عن بُعد","proof.freelance":"مشاريع عمل حر مختارة","proof.languages":"منتجات بالعربية والإنجليزية",
-    "contact.label":"تواصل","contact.title":"لنبنِ شيئًا مفيدًا.","contact.text":"متاح لفرص مطوّر فل ستاك ولمشاريع عمل حر مختارة من مختلف أنحاء العالم.","footer.note":"صُمم بعناية. وبُني بالكود.","footer.back":"العودة للأعلى ↑"
+    "proof.label":"أدلة مهنية","proof.title":"أدلة تتجاوز<br>جمال الواجهة.","proof.description":"برمجيات تعمل واختبارات آلية وأدلة مهنية موثقة تجعل تقييم عملي واضحًا وسهلًا.","proof.recommendationLabel":"توصية أكاديمية · أكتوبر 2025","proof.quote":"أظهر كريم مسؤولية وروحًا إيجابية وأداءً أكاديميًا قويًا والتزامًا مستمرًا طوال فترة دراسته.","proof.recommenderRole":"قسم علوم الحاسوب والمعلومات، جامعة الأقصى","proof.qualityLabel":"جودة موثقة","proof.qualityTitle":"نجاح 33 اختبارًا آليًا","proof.qualityText":"تم التحقق محليًا من أحدث نسخ المشاريع، بما في ذلك بناء الإنتاج حيث ينطبق.","proof.availabilityLabel":"متاح للفرص","proof.availabilityTitle":"متاح للعمل عالميًا","proof.fulltime":"وظائف بدوام كامل","proof.remote":"فرص عمل عن بُعد","proof.freelance":"مشاريع عمل حر مختارة","proof.languages":"منتجات بالعربية والإنجليزية","proof.credentialAcademic":"توصية أكاديمية","proof.credentialAcademicText":"توصية موقعة من الدكتور عبدالرافع الزملي","proof.credentialTeam":"خبرة منتج ضمن فريق","proof.credentialTeamText":"مساهمة فل ستاك ضمن فريق مشروع تخرج SmartStay","proof.credentialIndustry":"تدريب عملي","proof.credentialIndustryText":"180 ساعة مع فريق التطوير في شركة الكهرباء",
+    "contact.label":"تواصل","contact.title":"لنبنِ شيئًا مفيدًا.","contact.text":"متاح لفرص مطوّر فل ستاك ولمشاريع عمل حر مختارة من مختلف أنحاء العالم.","contact.remote":"عمل عن بُعد عالميًا","contact.languages":"العربية والإنجليزية","contact.role":"وظائف فل ستاك","contact.hire":"وظّف كريم","contact.download":"تحميل السيرة الذاتية","story.eyebrow":"قصة الـPortfolio في 60 ثانية","story.title":"من الفكرة إلى منتج يعمل.","story.fallback":"متصفحك لا يدعم فيديو الـPortfolio.","story.voice":"تعليق صوتي عربي","story.captions":"ترجمة إنجليزية متحركة","footer.note":"صُمم بعناية. وبُني بالكود.","footer.back":"العودة للأعلى ↑"
   }
 };
 
@@ -30,6 +32,15 @@ const projects = [
   {title:"LexiGuard AI",type:{en:"AI document analysis platform",ar:"منصة لتحليل المستندات بالذكاء الاصطناعي"},description:{en:"Authenticated Laravel application for document uploads, text extraction, risk analysis, reports and bilingual questions grounded in the uploaded document.",ar:"تطبيق Laravel مع تسجيل دخول لرفع المستندات واستخراج النص وتحليل المخاطر وإنشاء التقارير وطرح أسئلة بالعربية والإنجليزية اعتمادًا على محتوى الملف."},features:{en:["Real registration and login","PDF, Word and TXT processing","User ownership and admin review"],ar:["تسجيل حساب ودخول حقيقي","معالجة PDF وWord وTXT","ملكية ملفات ومراجعة إدارية"]},evidence:{en:"15/15 Laravel tests passing",ar:"نجاح 15/15 اختبار Laravel"},tags:["Laravel","PHP","MySQL","Document AI","Sanctum","OpenAI optional"],image:"lexiguard-home.jpg",repo:"https://github.com/kareemswidan/lexiguard-ai-laravel",live:"https://kareem-product-suite.kareemswidan11.workers.dev/lexiguard"},
   {title:"DOZO Intelligence",type:{en:"Authenticated AI product studio",ar:"استوديو منتجات مع بوابة عملاء وذكاء اصطناعي"},description:{en:"Arabic-first product studio with real accounts, secure sessions, persisted project requests and an AI Product Strategist that creates structured briefs.",ar:"استوديو منتجات عربي أولًا مع حسابات حقيقية وجلسات آمنة وطلبات مشاريع محفوظة ومستشار ذكاء اصطناعي ينشئ موجزات منظمة."},features:{en:["Secure signup and login","Authenticated AI workspace","Cloud database persistence"],ar:["تسجيل ودخول آمن","مساحة ذكاء اصطناعي محمية","حفظ دائم في قاعدة بيانات سحابية"]},evidence:{en:"Auth, sessions and persistence verified",ar:"تم التحقق من الحسابات والجلسات والحفظ"},tags:["JavaScript","Cloudflare D1","Web Crypto","Responsive UI","AI Briefs"],image:"dozo-home.jpg",repo:"https://github.com/kareemswidan/dozoo",live:"https://kareem-product-suite.kareemswidan11.workers.dev/original/dozo/html/index.html"},
   {title:"Electrical Solutions",type:{en:"Responsive business website",ar:"موقع أعمال متجاوب"},description:{en:"Public electrical-products website with catalog search, filters, product pages, accessible navigation and direct phone and WhatsApp contact paths.",ar:"موقع عام للمنتجات الكهربائية يضم بحثًا وفلاتر وصفحات منتجات وتنقلًا سهل الوصول ومسارات اتصال مباشرة عبر الهاتف وواتساب."},features:{en:["Public live website","Searchable product catalog","Responsive desktop and mobile UI"],ar:["موقع عام يعمل مباشرة","كتالوج منتجات قابل للبحث","واجهة متجاوبة للحاسوب والهاتف"]},evidence:{en:"3/3 site checks passing",ar:"نجاح 3/3 اختبارات للموقع"},tags:["HTML5","CSS3","JavaScript","Responsive UI","SEO"],image:"https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/screenshots/desktop-home.png",repo:"https://github.com/kareemswidan/kareem-swidan-electrical",live:"https://kareem-product-suite.kareemswidan11.workers.dev/demos/electrical/index.html"}
+];
+
+const projectOutcomes = [
+  [{value:"03",label:{en:"role portals",ar:"بوابات أدوار"}},{value:"05/05",label:{en:"checks passing",ar:"اختبارات ناجحة"}},{value:"D1",label:{en:"conflict protection",ar:"حماية من التعارض"}}],
+  [{value:"03",label:{en:"service portals",ar:"بوابات خدمة"}},{value:"06/06",label:{en:"checks passing",ar:"اختبارات ناجحة"}},{value:"Geo",label:{en:"location workflow",ar:"تدفق جغرافي"}}],
+  [{value:"04/04",label:{en:"Laravel tests",ar:"اختبارات Laravel"}},{value:"AR/EN",label:{en:"storefront",ar:"واجهة المتجر"}},{value:"SQL",label:{en:"persisted orders",ar:"طلبات محفوظة"}}],
+  [{value:"15/15",label:{en:"Laravel tests",ar:"اختبارات Laravel"}},{value:"03",label:{en:"document formats",ar:"صيغ مستندات"}},{value:"RBAC",label:{en:"secure review",ar:"مراجعة آمنة"}}],
+  [{value:"D1",label:{en:"cloud persistence",ar:"حفظ سحابي"}},{value:"AI",label:{en:"structured briefs",ar:"موجزات منظمة"}},{value:"Auth",label:{en:"secure sessions",ar:"جلسات آمنة"}}],
+  [{value:"03/03",label:{en:"site checks",ar:"اختبارات الموقع"}},{value:"SEO",label:{en:"crawlable pages",ar:"صفحات قابلة للأرشفة"}},{value:"RWD",label:{en:"mobile ready",ar:"جاهز للهاتف"}}]
 ];
 
 const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
@@ -81,27 +92,35 @@ function renderProjects(language){
   const grid=document.getElementById("projectsGrid");
   const caseStudySlugs=["smartstay","velora","nexora","lexiguard","dozo","electrical"];
   const words=language==="ar"?{caseStudy:"دراسة الحالة",live:"فتح المشروع",source:"الكود",pending:"يحتاج استضافة Backend",available:"نسخة عامة متاحة"}:{caseStudy:"Case study",live:"Live project",source:"Source",pending:"Backend hosting required",available:"Public deployment available"};
-  grid.innerHTML=projects.map((project,index)=>`
-    <article class="projectCard" data-reveal>
-      <a class="projectMedia" href="case-studies/${caseStudySlugs[index]}/" aria-label="${words.caseStudy}: ${project.title}">
-        <img src="${project.image}" alt="${project.title}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async">
+  const displayOrder=[0,3,1,2,4,5];
+  grid.innerHTML=displayOrder.map((projectIndex,displayIndex)=>{
+    const project=projects[projectIndex];
+    const slug=caseStudySlugs[projectIndex];
+    const outcomes=projectOutcomes[projectIndex];
+    return `
+    <article class="projectCard ${displayIndex<3?"featuredProject":"compactProject"}" data-reveal>
+      <a class="projectMedia" href="case-studies/${slug}/" aria-label="${words.caseStudy}: ${project.title}">
+        <img src="${project.image}" alt="${project.title}" loading="${displayIndex < 2 ? "eager" : "lazy"}" decoding="async">
         <span class="projectMediaIcon"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
       </a>
       <div class="projectBody">
-        <div class="projectTopline"><p class="projectType">${project.type[language]}</p><span class="projectNumber">0${index+1}</span></div>
+        <div class="projectTopline"><p class="projectType">${project.type[language]}</p><span class="projectNumber">0${displayIndex+1}</span></div>
         <h3>${project.title}</h3><p class="projectDescription">${project.description[language]}</p>
+        <div class="projectOutcomes">${outcomes.map(item=>`<span><b>${item.value}</b>${item.label[language]}</span>`).join("")}</div>
         <ul class="projectFeatures">${project.features[language].map(feature=>`<li>${feature}</li>`).join("")}</ul>
         <p class="projectEvidence"><i class="bi bi-patch-check-fill" aria-hidden="true"></i>${project.evidence[language]}</p>
         <div class="projectTags">${project.tags.map(tag=>`<span>${tag}</span>`).join("")}</div>
         <p class="projectStatus ${project.live?"live":""}"><span></span>${project.live?words.available:words.pending}</p>
         <div class="projectActions">
-          <a class="caseAction" href="case-studies/${caseStudySlugs[index]}/"><i class="bi bi-journal-code" aria-hidden="true"></i>${words.caseStudy}</a>
+          <a class="caseAction" href="case-studies/${slug}/"><i class="bi bi-journal-code" aria-hidden="true"></i>${words.caseStudy}</a>
           ${project.live?`<a class="liveAction" href="${project.live}" target="_blank" rel="noreferrer"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>${words.live}</a>`:`<span class="disabledAction" aria-disabled="true">${words.pending}</span>`}
           <a class="sourceAction" href="${project.repo}" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i>${words.source}</a>
         </div>
       </div>
-    </article>`).join("");
+    </article>`;
+  }).join("");
   observeReveals(grid.querySelectorAll("[data-reveal]"));
+  setupProjectMotion(grid.querySelectorAll(".projectCard"));
 }
 
 const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -123,6 +142,48 @@ function observeReveals(elements=document.querySelectorAll("[data-reveal]")){
     },{threshold:.12,rootMargin:"0px 0px -45px"});
   }
   elements.forEach(element=>revealObserver.observe(element));
+}
+
+function setupProjectMotion(cards){
+  if(reduceMotion||!window.matchMedia("(hover: hover)").matches)return;
+  cards.forEach(card=>{
+    card.addEventListener("pointermove",event=>{
+      const rect=card.getBoundingClientRect();
+      const x=(event.clientX-rect.left)/rect.width-.5;
+      const y=(event.clientY-rect.top)/rect.height-.5;
+      card.style.setProperty("--media-x",`${x*7}px`);
+      card.style.setProperty("--media-y",`${y*5}px`);
+    },{passive:true});
+    card.addEventListener("pointerleave",()=>{
+      card.style.removeProperty("--media-x");
+      card.style.removeProperty("--media-y");
+    });
+  });
+}
+
+function animateProofCounters(){
+  const counters=document.querySelectorAll("[data-count]");
+  if(reduceMotion){
+    counters.forEach(counter=>counter.textContent=Number(counter.dataset.count)<10?String(counter.dataset.count).padStart(2,"0"):counter.dataset.count);
+    return;
+  }
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      const element=entry.target;
+      const target=Number(element.dataset.count);
+      const start=performance.now();
+      const tick=now=>{
+        const progress=Math.min(1,(now-start)/900);
+        const value=Math.round(target*(1-Math.pow(1-progress,3)));
+        element.textContent=target<10?String(value).padStart(2,"0"):String(value);
+        if(progress<1)requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      observer.unobserve(element);
+    });
+  },{threshold:.65});
+  counters.forEach(counter=>observer.observe(counter));
 }
 
 document.getElementById("languageToggle").addEventListener("click",()=>{
@@ -151,6 +212,23 @@ menuToggle.addEventListener("click",()=>{
 document.querySelectorAll(".navLinks a").forEach(link=>link.addEventListener("click",closeMenu));
 window.addEventListener("resize",()=>{if(window.innerWidth>780)closeMenu();});
 
+const storyDialog=document.getElementById("storyDialog");
+const storyVideo=document.getElementById("storyVideo");
+const openStory=()=>{
+  if(typeof storyDialog.showModal==="function")storyDialog.showModal();else storyDialog.setAttribute("open","");
+  document.body.classList.add("storyOpen");
+  storyVideo.play().catch(()=>{});
+};
+const closeStory=()=>{
+  storyVideo.pause();
+  if(typeof storyDialog.close==="function"&&storyDialog.open)storyDialog.close();else storyDialog.removeAttribute("open");
+  document.body.classList.remove("storyOpen");
+};
+document.getElementById("storyOpen").addEventListener("click",openStory);
+document.getElementById("storyClose").addEventListener("click",closeStory);
+storyDialog.addEventListener("click",event=>{if(event.target===storyDialog)closeStory();});
+storyDialog.addEventListener("close",()=>{storyVideo.pause();document.body.classList.remove("storyOpen");});
+
 if(!reduceMotion && window.matchMedia("(hover: hover)").matches){
   window.addEventListener("pointermove",event=>{
     document.documentElement.style.setProperty("--pointer-x",`${event.clientX}px`);
@@ -161,3 +239,4 @@ if(!reduceMotion && window.matchMedia("(hover: hover)").matches){
 applyTheme(currentTheme);
 translatePage(currentLanguage);
 observeReveals();
+animateProofCounters();
