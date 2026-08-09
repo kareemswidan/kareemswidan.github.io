@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, stat } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
 const read = (path) => readFile(new URL(path, root), "utf8");
@@ -10,12 +10,34 @@ test("portfolio links every project to an independent case study", async () => {
   const [home, app] = await Promise.all([read("index.html"), read("app.js")]);
   assert.match(home, /case-card\.css/);
   assert.match(app, /caseStudySlugs/);
-  assert.match(app, /case-studies\/\$\{caseStudySlugs\[index\]\}/);
+  assert.match(app, /const displayOrder=\[0,3,1,2,4,5\]/);
+  assert.match(app, /case-studies\/\$\{slug\}\//);
   for (const slug of slugs) {
     const page = "case-studies/" + slug + "/index.html";
     await access(new URL(page, root));
     assert.match(await read(page), new RegExp('data-project="' + slug + '"'));
   }
+});
+
+test("world-class upgrade ships all eight portfolio improvements", async () => {
+  const [home, app, styles, video] = await Promise.all([
+    read("index.html"),
+    read("app.js"),
+    read("style.css"),
+    stat(new URL("media/kareem-swidan-story.mp4", root))
+  ]);
+  await access(new URL("media/kareem-swidan-story-poster.jpg", root));
+  await access(new URL("media/kareem-swidan-story.en.vtt", root));
+  assert.ok(video.size > 1_000_000, "portfolio story should be a real encoded video");
+  assert.match(home, /id="storyDialog"/);
+  assert.match(home, /id="about"/);
+  assert.match(home, /class="credibilityRail"/);
+  assert.match(home, /class="hireFacts"/);
+  assert.match(home, /data-count="33"/);
+  assert.match(app, /projectOutcomes/);
+  assert.match(app, /featuredProject/);
+  assert.match(app, /setupProjectMotion/);
+  assert.match(styles, /prefers-reduced-motion/);
 });
 
 test("case studies include the complete engineering evidence model", async () => {
