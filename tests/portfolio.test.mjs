@@ -146,14 +146,15 @@ test("portfolio publishes professional proof without exposing recommender contac
 });
 
 test("portfolio exposes crawlable SEO metadata and current Cloudflare deployments", async () => {
-  const [home, app, studies, electrical, robots, sitemap, manifest] = await Promise.all([
+  const [home, app, studies, electrical, robots, sitemap, manifest, readme] = await Promise.all([
     read("index.html"),
     read("app.js"),
     read("case-study.js"),
     read("electrical.html"),
     read("robots.txt"),
     read("sitemap.xml"),
-    read("manifest.webmanifest")
+    read("manifest.webmanifest"),
+    read("README.md")
   ]);
   assert.match(home, /application\/ld\+json/);
   assert.match(home, /"@type": "ProfilePage"/);
@@ -167,6 +168,10 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(manifest, /Kareem Swidan/);
   assert.match(home, /<link rel="canonical" href="https:\/\/kareemswidan\.github\.io\/">/);
   assert.doesNotMatch(home + robots + sitemap, /github\.io\/kareem-swidan-portfolio/);
+  // the CI badge must track the repo that actually builds the site; pointed at
+  // kareem-swidan-portfolio the workflow does not exist there and it rendered empty
+  assert.match(readme, /!\[CI\]\(https:\/\/github\.com\/kareemswidan\/kareemswidan\.github\.io\/actions\/workflows\/ci\.yml\/badge\.svg\)/);
+  assert.doesNotMatch(readme, /kareem-swidan-portfolio\/actions/);
 });
 
 test("intrinsic size attributes cannot override the CSS box of an image", async () => {
