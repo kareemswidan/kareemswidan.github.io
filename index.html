@@ -126,6 +126,12 @@
             <span data-i18n="hero.role">Full-Stack Developer</span>
             <strong>Kareem Swidan</strong>
           </div>
+          <div class="portraitSocialDock" aria-label="Social profiles" data-i18n-aria="aria.socialProfiles">
+            <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+            <a href="https://www.instagram.com/kareem_swidan2002" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            <a href="https://wa.me/972598934925" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+          </div>
         </div>
         <div class="floatingBadge badgeOne"><i class="bi bi-code-slash" aria-hidden="true"></i><span>Front-end<br><strong>+</strong> Back-end</span></div>
         <div class="floatingBadge badgeTwo"><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.remote">Remote ready</span></div>
@@ -139,6 +145,17 @@
       <div><strong>RTL / LTR</strong><span data-i18n="metrics.directions">Native directions</span></div>
       <div><strong>CI</strong><span data-i18n="metrics.ci">Verified builds</span></div>
       <div><strong>Cloud</strong><span data-i18n="metrics.cloud">Production deployment</span></div>
+    </section>
+
+    <section class="techRail" aria-label="Core technology stack" data-i18n-aria="aria.techStack">
+      <div class="techRailTrack">
+        <div class="techRailGroup">
+          <span><i class="bi bi-filetype-tsx" aria-hidden="true"></i>React</span><span><i class="bi bi-triangle" aria-hidden="true"></i>Next.js</span><span><i class="bi bi-filetype-ts" aria-hidden="true"></i>TypeScript</span><span><i class="bi bi-braces" aria-hidden="true"></i>Laravel</span><span><i class="bi bi-node-plus" aria-hidden="true"></i>Node.js</span><span><i class="bi bi-cloud" aria-hidden="true"></i>Cloudflare</span><span><i class="bi bi-database" aria-hidden="true"></i>MySQL</span><span><i class="bi bi-database-check" aria-hidden="true"></i>D1</span><span><i class="bi bi-github" aria-hidden="true"></i>GitHub</span>
+        </div>
+        <div class="techRailGroup" aria-hidden="true">
+          <span><i class="bi bi-filetype-tsx" aria-hidden="true"></i>React</span><span><i class="bi bi-triangle" aria-hidden="true"></i>Next.js</span><span><i class="bi bi-filetype-ts" aria-hidden="true"></i>TypeScript</span><span><i class="bi bi-braces" aria-hidden="true"></i>Laravel</span><span><i class="bi bi-node-plus" aria-hidden="true"></i>Node.js</span><span><i class="bi bi-cloud" aria-hidden="true"></i>Cloudflare</span><span><i class="bi bi-database" aria-hidden="true"></i>MySQL</span><span><i class="bi bi-database-check" aria-hidden="true"></i>D1</span><span><i class="bi bi-github" aria-hidden="true"></i>GitHub</span>
+        </div>
+      </div>
     </section>
 
     <section class="section shell aboutSection" id="about">
@@ -162,6 +179,12 @@
         </div>
           <p data-i18n="projects.description">Three flagship products lead the story, followed by three focused builds—with live demos, source code, measurable results and engineering case studies.</p>
       </div>
+      <div class="projectFilters" role="group" aria-label="Filter projects" data-i18n-aria="aria.projectFilters" data-reveal>
+        <button class="isActive" type="button" data-project-filter="all" aria-pressed="true" data-i18n="projects.filterAll">All projects</button>
+        <button type="button" data-project-filter="fullstack" aria-pressed="false" data-i18n="projects.filterFullstack">Full-Stack</button>
+        <button type="button" data-project-filter="ai" aria-pressed="false" data-i18n="projects.filterAi">AI &amp; Data</button>
+        <button type="button" data-project-filter="business" aria-pressed="false" data-i18n="projects.filterBusiness">Business sites</button>
+      </div>
       <div id="projectsGrid" class="projectsGrid" aria-live="polite"></div>
     </section>
 
@@ -175,10 +198,12 @@
           <p data-i18n="expertise.description">I combine product thinking with hands-on implementation across interfaces, back-end systems, data and deployment.</p>
         </div>
         <div class="expertiseGrid">
-          <article data-reveal><i class="bi bi-window-stack" aria-hidden="true"></i><span>01</span><h3 data-i18n="expertise.frontendTitle">Interface engineering</h3><p data-i18n="expertise.frontendText">React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.</p></article>
-          <article data-reveal><i class="bi bi-braces-asterisk" aria-hidden="true"></i><span>02</span><h3 data-i18n="expertise.backendTitle">Back-end systems</h3><p data-i18n="expertise.backendText">Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.</p></article>
-          <article data-reveal><i class="bi bi-database-check" aria-hidden="true"></i><span>03</span><h3 data-i18n="expertise.dataTitle">Data and cloud</h3><p data-i18n="expertise.dataText">MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.</p></article>
-          <article data-reveal><i class="bi bi-rocket-takeoff" aria-hidden="true"></i><span>04</span><h3 data-i18n="expertise.deliveryTitle">Product delivery</h3><p data-i18n="expertise.deliveryText">Testing, Git collaboration, documentation, performance, SEO and production-minded delivery.</p></article>
+          <article data-reveal><i class="bi bi-window-stack" aria-hidden="true"></i><span>01</span><h3 data-i18n="expertise.frontendTitle">Full-Stack web applications</h3><p data-i18n="expertise.frontendText">Production-ready products connecting polished interfaces, secure APIs, databases and deployment.</p></article>
+          <article data-reveal><i class="bi bi-people" aria-hidden="true"></i><span>02</span><h3 data-i18n="expertise.backendTitle">Marketplaces &amp; role portals</h3><p data-i18n="expertise.backendText">Customer, owner and admin journeys with secure sessions, permissions and complete business workflows.</p></article>
+          <article data-reveal><i class="bi bi-stars" aria-hidden="true"></i><span>03</span><h3 data-i18n="expertise.dataTitle">AI-assisted product features</h3><p data-i18n="expertise.dataText">Useful AI planning, matching, analysis and structured outputs grounded in the product experience.</p></article>
+          <article data-reveal><i class="bi bi-translate" aria-hidden="true"></i><span>04</span><h3 data-i18n="expertise.deliveryTitle">Bilingual product experiences</h3><p data-i18n="expertise.deliveryText">Arabic and English interfaces with native RTL/LTR direction, accessibility and responsive behavior.</p></article>
+          <article data-reveal><i class="bi bi-database-check" aria-hidden="true"></i><span>05</span><h3 data-i18n="expertise.cloudTitle">Data &amp; cloud delivery</h3><p data-i18n="expertise.cloudText">Relational data models, Cloudflare deployment and reliable persistence built for real workflows.</p></article>
+          <article data-reveal><i class="bi bi-speedometer2" aria-hidden="true"></i><span>06</span><h3 data-i18n="expertise.qualityTitle">Performance, testing &amp; SEO</h3><p data-i18n="expertise.qualityText">Automated checks, production builds, crawlable pages and careful performance-minded delivery.</p></article>
         </div>
       </div>
     </section>
@@ -265,12 +290,15 @@
           <a href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer" class="button hireGhost"><span data-i18n="contact.download">Download CV</span><i class="bi bi-download" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="contactLinks" aria-label="Contact links" data-i18n-aria="aria.contactLinks">
-        <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/kareem_swidan2002" target="_blank" rel="noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-        <a href="https://wa.me/972598934925" target="_blank" rel="noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>+972 59 893 4925</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      </div>
+      <form class="contactForm" id="contactForm" novalidate>
+        <div class="formHeading"><i class="bi bi-chat-dots" aria-hidden="true"></i><div><strong data-i18n="contact.formTitle">Start a conversation</strong><span data-i18n="contact.formHint">Your message will open securely in WhatsApp.</span></div></div>
+        <div class="formRow">
+          <label><span data-i18n="contact.name">Name</span><input id="contactName" name="name" type="text" autocomplete="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Your name"></label>
+          <label><span data-i18n="contact.email">Email</span><input id="contactEmail" name="email" type="email" autocomplete="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@example.com"></label>
+        </div>
+        <label><span data-i18n="contact.message">Project or opportunity</span><textarea id="contactMessage" name="message" rows="4" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tell me what you would like to build..."></textarea></label>
+        <div class="formFooter"><p id="contactStatus" role="status" aria-live="polite"></p><button class="contactSubmit" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i><span data-i18n="contact.send">Continue in WhatsApp</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></button></div>
+      </form>
     </section>
   </main>
 
