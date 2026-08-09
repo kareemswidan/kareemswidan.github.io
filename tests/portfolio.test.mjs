@@ -38,6 +38,7 @@ test("world-class upgrade ships all eight portfolio improvements", async () => {
   assert.match(app, /featuredProject/);
   assert.match(app, /setupProjectMotion/);
   assert.match(styles, /prefers-reduced-motion/);
+  assert.match(styles, /\.contactSection\s*\{[^}]*margin-block:\s*96px\s+95px/);
 });
 
 test("case studies include the complete engineering evidence model", async () => {
