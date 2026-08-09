@@ -3,124 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Kareem Swidan - Full-Stack Developer portfolio featuring six public software projects.">
+  <meta name="description" content="Kareem Swidan — Full-Stack Developer building bilingual, production-ready web products.">
+  <meta name="theme-color" content="#0b1817">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kareem Swidan | Full-Stack Developer">
+  <meta property="og:description" content="Bilingual, production-ready web products—from polished interfaces to secure systems and cloud deployment.">
+  <meta property="og:url" content="https://kareemswidan.github.io/kareem-swidan-portfolio/">
+  <meta property="og:image" content="https://kareemswidan.github.io/kareem-swidan-portfolio/og.png">
+  <meta property="og:image:width" content="1735">
+  <meta property="og:image:height" content="907">
+  <meta property="og:image:alt" content="Kareem Swidan — Full-Stack Developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kareem Swidan | Full-Stack Developer">
+  <meta name="twitter:description" content="Bilingual, production-ready web products—from polished interfaces to secure systems and cloud deployment.">
+  <meta name="twitter:image" content="https://kareemswidan.github.io/kareem-swidan-portfolio/og.png">
   <title>Kareem Swidan | Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="case-card.css">
-  <style>.portraitFrame img{width:100%;height:100%;object-fit:cover;object-position:center top;inset:0;filter:saturate(.9) contrast(1.02)}</style>
 </head>
 <body>
+  <div class="pageGlow" aria-hidden="true"></div>
+
   <header class="siteHeader">
     <nav class="shell nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Kareem Swidan home">K<span>S</span></a>
-      <div class="navLinks">
+      <a class="brand" href="#top" aria-label="Kareem Swidan home">
+        <span class="brandMark">KS</span>
+        <span class="brandText">Kareem Swidan</span>
+      </a>
+
+      <div class="navLinks" id="navLinks">
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
+
       <div class="navActions">
-        <button id="themeToggle" class="themeToggle" type="button" aria-label="Switch to dark mode">
-          <span id="themeIcon" aria-hidden="true">◐</span><strong id="themeLabel">Dark</strong>
+        <button id="themeToggle" class="controlButton" type="button" aria-label="Switch to dark mode">
+          <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+          <span id="themeLabel">Dark</span>
         </button>
-        <button id="languageToggle" class="languageToggle" type="button" aria-label="Switch to Arabic">
-          <span aria-hidden="true">◎</span><strong id="languageLabel">العربية</strong>
+        <button id="languageToggle" class="controlButton languageToggle" type="button" aria-label="Switch to Arabic">
+          <i class="bi bi-translate" aria-hidden="true"></i>
+          <span id="languageLabel">العربية</span>
         </button>
-        <a class="navCta" href="mailto:kareemswidan11@gmail.com" data-i18n="nav.talk">Let's talk</a>
+        <a class="navCta" href="https://wa.me/972598934925" target="_blank" rel="noreferrer">
+          <span data-i18n="nav.talk">Let's talk</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <button id="menuToggle" class="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero shell">
-      <div class="heroCopy">
-        <p class="status"><span></span><span data-i18n="hero.status">Available immediately - Remote ready</span></p>
-        <p class="intro" data-i18n="hero.intro">Hello, I'm</p>
-        <h1 data-i18n="hero.name">KAREEM<br>SWIDAN</h1>
-        <p class="heroRole" data-i18n="hero.role">FULL-STACK DEVELOPER</p>
-        <p class="heroLead" data-i18n="hero.lead">I design and build bilingual digital products from responsive interfaces to secure APIs and relational databases.</p>
+      <div class="heroCopy" data-reveal>
+        <p class="status"><span aria-hidden="true"></span><span data-i18n="hero.status">Available for remote opportunities</span></p>
+        <p class="eyebrow" data-i18n="hero.intro">Hello, I'm Kareem</p>
+        <h1 data-i18n="hero.name">Full-Stack Developer<br><em>with a product mindset.</em></h1>
+        <p class="heroLead" data-i18n="hero.lead">I turn ideas into reliable bilingual web products—from polished interfaces to secure APIs, databases and cloud deployment.</p>
         <div class="heroActions">
-          <a class="button primary" href="#projects" data-i18n="hero.work">Explore my projects</a>
-          <a class="button ghost" href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cv">Open / Download CV</a>
+          <a class="button primary" href="#projects"><span data-i18n="hero.work">View selected work</span><i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+          <a class="button ghost" href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer"><i class="bi bi-file-earmark-person" aria-hidden="true"></i><span data-i18n="hero.cv">View my CV</span></a>
+        </div>
+        <div class="socialRow" aria-label="Social profiles">
+          <span data-i18n="hero.follow">Find me online</span>
+          <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/kareem_swidan2002" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/972598934925" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="heroVisual">
-        <div class="portraitFrame">
-          <img src="hero-fullstack-v2.webp" alt="Abstract full-stack software architecture">
-          <span class="portraitTag" data-i18n="hero.featured">FULL-STACK / SYSTEMS</span>
+
+      <div class="heroVisual" data-reveal>
+        <div class="portraitCard">
+          <div class="portraitTopline"><span>01 / 06</span><span data-i18n="hero.location">Gaza, Palestine</span></div>
+          <img src="kareem-swidan.jpg" alt="Kareem Swidan, Full-Stack Developer">
+          <div class="portraitCaption">
+            <span data-i18n="hero.role">Full-Stack Developer</span>
+            <strong>Kareem Swidan</strong>
+          </div>
         </div>
-        <div class="availabilityCard">
-          <span data-i18n="hero.focusLabel">Current focus</span>
-          <strong data-i18n="hero.focus">Full-stack products, marketplaces and AI-assisted experiences.</strong>
-        </div>
+        <div class="floatingBadge badgeOne"><i class="bi bi-code-slash" aria-hidden="true"></i><span>Front-end<br><strong>+</strong> Back-end</span></div>
+        <div class="floatingBadge badgeTwo"><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.remote">Remote ready</span></div>
       </div>
     </section>
 
-    <section class="metrics shell" aria-label="Profile highlights">
+    <section class="metrics shell" aria-label="Profile highlights" data-reveal>
       <div><strong>06</strong><span data-i18n="metrics.projects">Public projects</span></div>
-      <div><strong>180</strong><span data-i18n="metrics.training">Training hours</span></div>
-      <div><strong>B2</strong><span data-i18n="metrics.english">English - self-assessed</span></div>
+      <div><strong>180h</strong><span data-i18n="metrics.training">Industry training</span></div>
+      <div><strong>AR / EN</strong><span data-i18n="metrics.bilingual">Bilingual products</span></div>
       <div><strong>2025</strong><span data-i18n="metrics.graduate">Applied IT graduate</span></div>
     </section>
 
     <section class="section shell" id="projects">
-      <div class="sectionHeader">
-        <div><p class="sectionIndex">01 / <span data-i18n="projects.label">Selected work</span></p><h2 data-i18n="projects.title">Six products. Real engineering decisions.</h2></div>
-        <p data-i18n="projects.description">All six public software projects from my GitHub profile. Live buttons are shown only when a complete public deployment is available.</p>
+      <div class="sectionHeader" data-reveal>
+        <div>
+          <p class="sectionIndex">01 — <span data-i18n="projects.label">Selected work</span></p>
+          <h2 data-i18n="projects.title">Products built to work,<br>not just to look good.</h2>
+        </div>
+        <p data-i18n="projects.description">Six public projects spanning marketplaces, AI tools and responsive business experiences—with live demos, source code and engineering case studies.</p>
       </div>
       <div id="projectsGrid" class="projectsGrid" aria-live="polite"></div>
     </section>
 
     <section class="expertiseBand" id="expertise">
       <div class="section shell">
-        <div class="sectionHeader light">
-          <div><p class="sectionIndex">02 / <span data-i18n="expertise.label">Expertise</span></p><h2 data-i18n="expertise.title">Focused on complete, usable products.</h2></div>
-          <p data-i18n="expertise.description">I combine product thinking with practical implementation across front-end, back-end, data and deployment.</p>
+        <div class="sectionHeader light" data-reveal>
+          <div>
+            <p class="sectionIndex">02 — <span data-i18n="expertise.label">What I do</span></p>
+            <h2 data-i18n="expertise.title">One developer.<br>A complete product view.</h2>
+          </div>
+          <p data-i18n="expertise.description">I combine product thinking with hands-on implementation across interfaces, back-end systems, data and deployment.</p>
         </div>
         <div class="expertiseGrid">
-          <article><span>01</span><h3 data-i18n="expertise.frontendTitle">Interface engineering</h3><p data-i18n="expertise.frontendText">React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.</p></article>
-          <article><span>02</span><h3 data-i18n="expertise.backendTitle">Back-end systems</h3><p data-i18n="expertise.backendText">Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.</p></article>
-          <article><span>03</span><h3 data-i18n="expertise.dataTitle">Data and cloud</h3><p data-i18n="expertise.dataText">MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.</p></article>
-          <article><span>04</span><h3 data-i18n="expertise.deliveryTitle">Product delivery</h3><p data-i18n="expertise.deliveryText">Testing, Git-based collaboration, documentation, performance, SEO and production-minded delivery.</p></article>
+          <article data-reveal><i class="bi bi-window-stack" aria-hidden="true"></i><span>01</span><h3 data-i18n="expertise.frontendTitle">Interface engineering</h3><p data-i18n="expertise.frontendText">React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.</p></article>
+          <article data-reveal><i class="bi bi-braces-asterisk" aria-hidden="true"></i><span>02</span><h3 data-i18n="expertise.backendTitle">Back-end systems</h3><p data-i18n="expertise.backendText">Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.</p></article>
+          <article data-reveal><i class="bi bi-database-check" aria-hidden="true"></i><span>03</span><h3 data-i18n="expertise.dataTitle">Data and cloud</h3><p data-i18n="expertise.dataText">MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.</p></article>
+          <article data-reveal><i class="bi bi-rocket-takeoff" aria-hidden="true"></i><span>04</span><h3 data-i18n="expertise.deliveryTitle">Product delivery</h3><p data-i18n="expertise.deliveryText">Testing, Git collaboration, documentation, performance, SEO and production-minded delivery.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section shell" id="experience">
-      <div class="sectionHeader compact">
-        <div><p class="sectionIndex">03 / <span data-i18n="experience.label">Journey</span></p><h2 data-i18n="experience.title">Practical experience grounded in applied IT.</h2></div>
+      <div class="sectionHeader compact" data-reveal>
+        <div>
+          <p class="sectionIndex">03 — <span data-i18n="experience.label">Journey</span></p>
+          <h2 data-i18n="experience.title">Learning by building<br>real systems.</h2>
+        </div>
       </div>
       <div class="timeline">
-        <article><time>2025</time><div><p class="timelineType" data-i18n="experience.degreeType">Bachelor's Degree - Final grade 81.7%</p><h3 data-i18n="experience.degreeTitle">Applied Information Technology</h3><p data-i18n="experience.degreeText">Al-Aqsa University, College of Computer & Information Technology. Graduation project: SmartStay AI Palestine.</p></div></article>
-        <article><time>2023</time><div><p class="timelineType" data-i18n="experience.internType">Web Development Intern - 180 hours</p><h3 data-i18n="experience.internTitle">Electricity Company, Khan Younis</h3><p data-i18n="experience.internText">Worked within a development team on an internal database-backed web system, responsive interfaces, functional testing and issue resolution.</p></div></article>
-        <article><time>2022 - 2023</time><div><p class="timelineType" data-i18n="experience.trainingType">Professional development</p><h3 data-i18n="experience.trainingTitle">Web Development and Freelancing</h3><p data-i18n="experience.trainingText">Focused training in web application development, entrepreneurship, client communication and project delivery.</p></div></article>
+        <article data-reveal><time>2025</time><div><p class="timelineType" data-i18n="experience.degreeType">Bachelor's Degree — Final grade 81.7%</p><h3 data-i18n="experience.degreeTitle">Applied Information Technology</h3><p data-i18n="experience.degreeText">Al-Aqsa University, College of Computer & Information Technology. Graduation project: SmartStay AI Palestine.</p></div><i class="bi bi-mortarboard" aria-hidden="true"></i></article>
+        <article data-reveal><time>2023</time><div><p class="timelineType" data-i18n="experience.internType">Web Development Intern — 180 hours</p><h3 data-i18n="experience.internTitle">Electricity Company, Khan Younis</h3><p data-i18n="experience.internText">Worked within a development team on an internal database-backed web system, responsive interfaces, functional testing and issue resolution.</p></div><i class="bi bi-briefcase" aria-hidden="true"></i></article>
+        <article data-reveal><time>2022 — 2023</time><div><p class="timelineType" data-i18n="experience.trainingType">Professional development</p><h3 data-i18n="experience.trainingTitle">Web Development and Freelancing</h3><p data-i18n="experience.trainingText">Focused training in web development, entrepreneurship, client communication and project delivery.</p></div><i class="bi bi-stars" aria-hidden="true"></i></article>
       </div>
     </section>
 
-    <section class="contactSection shell" id="contact">
-      <p class="sectionIndex">04 / <span data-i18n="contact.label">Contact</span></p>
-      <h2 data-i18n="contact.title">Have a product to build?</h2>
-      <p data-i18n="contact.text">Available immediately for Full-Stack Developer opportunities worldwide, including remote roles.</p>
-      <a class="emailLink" href="mailto:kareemswidan11@gmail.com">kareemswidan11@gmail.com</a>
-      <div class="contactLinks">
-        <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="tel:+972598934925">+972 59 893 4925</a>
+    <section class="contactSection shell" id="contact" data-reveal>
+      <div class="contactCopy">
+        <p class="sectionIndex">04 — <span data-i18n="contact.label">Contact</span></p>
+        <h2 data-i18n="contact.title">Let's build something useful.</h2>
+        <p data-i18n="contact.text">Available for Full-Stack Developer opportunities and selected freelance projects worldwide.</p>
+        <a class="emailLink" href="mailto:kareemswidan11@gmail.com">kareemswidan11@gmail.com <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="contactLinks" aria-label="Contact links">
+        <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/kareem_swidan2002" target="_blank" rel="noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="https://wa.me/972598934925" target="_blank" rel="noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>+972 59 893 4925</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </section>
   </main>
 
-  <footer class="shell"><span>&copy; 2026 Kareem Swidan</span><span data-i18n="footer.location">Gaza, Palestine</span></footer>
-  <script>
-    fetch("hero-fullstack-v2.b64?v=2")
-      .then(response => response.ok ? response.text() : Promise.reject())
-      .then(data => { document.querySelector(".portraitFrame img").src = "data:image/webp;base64," + data.replace(/\s/g, ""); })
-      .catch(() => {});
-  </script>
-  <script src="app.js?v=8" defer></script>
+  <footer class="shell">
+    <span>&copy; 2026 Kareem Swidan</span>
+    <span data-i18n="footer.note">Designed with care. Built with code.</span>
+    <a href="#top" data-i18n="footer.back">Back to top ↑</a>
+  </footer>
+
+  <script src="app.js?v=9" defer></script>
 </body>
 </html>

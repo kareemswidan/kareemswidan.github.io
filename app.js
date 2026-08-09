@@ -1,21 +1,21 @@
 const translations = {
   en: {
     "nav.projects":"Projects","nav.expertise":"Expertise","nav.experience":"Experience","nav.contact":"Contact","nav.talk":"Let's talk",
-    "hero.status":"Available immediately - Remote ready","hero.intro":"Hello, I'm","hero.name":"KAREEM<br>SWIDAN","hero.role":"FULL-STACK DEVELOPER","hero.lead":"I design and build bilingual digital products from responsive interfaces to secure APIs and relational databases.","hero.work":"Explore my projects","hero.cv":"Open / Download CV","hero.featured":"FULL-STACK / SYSTEMS","hero.focusLabel":"Current focus","hero.focus":"Full-stack products, marketplaces and AI-assisted experiences.",
-    "metrics.projects":"Public projects","metrics.training":"Training hours","metrics.english":"English - self-assessed","metrics.graduate":"Applied IT graduate",
-    "projects.label":"Selected work","projects.title":"Six products. Real engineering decisions.","projects.description":"All six public software projects from my GitHub profile. Live buttons are shown only when a complete public deployment is available.",
-    "expertise.label":"Expertise","expertise.title":"Focused on complete, usable products.","expertise.description":"I combine product thinking with practical implementation across front-end, back-end, data and deployment.","expertise.frontendTitle":"Interface engineering","expertise.frontendText":"React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.","expertise.backendTitle":"Back-end systems","expertise.backendText":"Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.","expertise.dataTitle":"Data and cloud","expertise.dataText":"MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.","expertise.deliveryTitle":"Product delivery","expertise.deliveryText":"Testing, Git-based collaboration, documentation, performance, SEO and production-minded delivery.",
-    "experience.label":"Journey","experience.title":"Practical experience grounded in applied IT.","experience.degreeType":"Bachelor's Degree - Final grade 81.7%","experience.degreeTitle":"Applied Information Technology","experience.degreeText":"Al-Aqsa University, College of Computer & Information Technology. Graduation project: SmartStay AI Palestine.","experience.internType":"Web Development Intern - 180 hours","experience.internTitle":"Electricity Company, Khan Younis","experience.internText":"Worked within a development team on an internal database-backed web system, responsive interfaces, functional testing and issue resolution.","experience.trainingType":"Professional development","experience.trainingTitle":"Web Development and Freelancing","experience.trainingText":"Focused training in web application development, entrepreneurship, client communication and project delivery.",
-    "contact.label":"Contact","contact.title":"Have a product to build?","contact.text":"Available immediately for Full-Stack Developer opportunities worldwide, including remote roles.","footer.location":"Gaza, Palestine"
+    "hero.status":"Available for remote opportunities","hero.intro":"Hello, I'm Kareem","hero.name":"Full-Stack Developer<br><em>with a product mindset.</em>","hero.role":"Full-Stack Developer","hero.lead":"I turn ideas into reliable bilingual web products—from polished interfaces to secure APIs, databases and cloud deployment.","hero.work":"View selected work","hero.cv":"View my CV","hero.follow":"Find me online","hero.location":"Gaza, Palestine","hero.remote":"Remote ready",
+    "metrics.projects":"Public projects","metrics.training":"Industry training","metrics.bilingual":"Bilingual products","metrics.graduate":"Applied IT graduate",
+    "projects.label":"Selected work","projects.title":"Products built to work,<br>not just to look good.","projects.description":"Six public projects spanning marketplaces, AI tools and responsive business experiences—with live demos, source code and engineering case studies.",
+    "expertise.label":"What I do","expertise.title":"One developer.<br>A complete product view.","expertise.description":"I combine product thinking with hands-on implementation across interfaces, back-end systems, data and deployment.","expertise.frontendTitle":"Interface engineering","expertise.frontendText":"React, Next.js, TypeScript, responsive design, accessibility and bilingual RTL/LTR experiences.","expertise.backendTitle":"Back-end systems","expertise.backendText":"Node.js, Express, Laravel, REST APIs, role-based access, secure sessions and validation.","expertise.dataTitle":"Data and cloud","expertise.dataText":"MySQL, PostgreSQL, SQLite, Cloudflare D1/R2, Prisma, Drizzle and reliable data workflows.","expertise.deliveryTitle":"Product delivery","expertise.deliveryText":"Testing, Git collaboration, documentation, performance, SEO and production-minded delivery.",
+    "experience.label":"Journey","experience.title":"Learning by building<br>real systems.","experience.degreeType":"Bachelor's Degree — Final grade 81.7%","experience.degreeTitle":"Applied Information Technology","experience.degreeText":"Al-Aqsa University, College of Computer & Information Technology. Graduation project: SmartStay AI Palestine.","experience.internType":"Web Development Intern — 180 hours","experience.internTitle":"Electricity Company, Khan Younis","experience.internText":"Worked within a development team on an internal database-backed web system, responsive interfaces, functional testing and issue resolution.","experience.trainingType":"Professional development","experience.trainingTitle":"Web Development and Freelancing","experience.trainingText":"Focused training in web development, entrepreneurship, client communication and project delivery.",
+    "contact.label":"Contact","contact.title":"Let's build something useful.","contact.text":"Available for Full-Stack Developer opportunities and selected freelance projects worldwide.","footer.note":"Designed with care. Built with code.","footer.back":"Back to top ↑"
   },
   ar: {
     "nav.projects":"المشاريع","nav.expertise":"الخبرات","nav.experience":"المسيرة","nav.contact":"تواصل","nav.talk":"تواصل معي",
-    "hero.status":"متاح للبدء فورًا - جاهز للعمل عن بُعد","hero.intro":"مرحبًا، أنا","hero.name":"كريم<br>سويدان","hero.role":"مطوّر فل ستاك","hero.lead":"أصمم وأطوّر منتجات رقمية ثنائية اللغة، من الواجهات المتجاوبة إلى واجهات البرمجة الآمنة وقواعد البيانات العلائقية.","hero.work":"استعرض مشاريعي","hero.cv":"فتح / تنزيل السيرة الذاتية","hero.featured":"فل ستاك / أنظمة","hero.focusLabel":"التركيز الحالي","hero.focus":"منتجات فل ستاك، منصات متعددة الأطراف وتجارب مدعومة بالذكاء الاصطناعي.",
-    "metrics.projects":"مشاريع عامة","metrics.training":"ساعة تدريب","metrics.english":"الإنجليزية - تقييم ذاتي","metrics.graduate":"خريج تكنولوجيا معلومات تطبيقية",
-    "projects.label":"أعمال مختارة","projects.title":"ستة منتجات وقرارات هندسية حقيقية.","projects.description":"جميع المشاريع البرمجية العامة الستة الموجودة في حسابي على GitHub. يظهر زر التشغيل فقط عندما تكون هناك نسخة عامة كاملة قابلة للتجربة.",
-    "expertise.label":"الخبرات","expertise.title":"أركّز على منتجات كاملة وقابلة للاستخدام.","expertise.description":"أجمع بين التفكير في المنتج والتنفيذ العملي في الواجهات والخوادم والبيانات والنشر.","expertise.frontendTitle":"هندسة الواجهات","expertise.frontendText":"React وNext.js وTypeScript، تصميم متجاوب، سهولة وصول وتجارب عربية وإنجليزية باتجاهي RTL وLTR.","expertise.backendTitle":"أنظمة الخادم","expertise.backendText":"Node.js وExpress وLaravel وREST APIs، صلاحيات حسب الدور، جلسات آمنة والتحقق من البيانات.","expertise.dataTitle":"البيانات والسحابة","expertise.dataText":"MySQL وPostgreSQL وSQLite وCloudflare D1/R2 وPrisma وDrizzle وتدفقات بيانات موثوقة.","expertise.deliveryTitle":"تسليم المنتج","expertise.deliveryText":"اختبارات، تعاون باستخدام Git، توثيق، أداء، تحسين محركات البحث وتسليم جاهز للإنتاج.",
-    "experience.label":"المسيرة","experience.title":"خبرة عملية مبنية على تكنولوجيا المعلومات التطبيقية.","experience.degreeType":"درجة البكالوريوس - المعدل النهائي 81.7%","experience.degreeTitle":"تكنولوجيا المعلومات التطبيقية","experience.degreeText":"جامعة الأقصى، كلية الحاسبات وتكنولوجيا المعلومات. مشروع التخرج: SmartStay AI Palestine.","experience.internType":"متدرب تطوير ويب - 180 ساعة","experience.internTitle":"شركة الكهرباء، خان يونس","experience.internText":"عملت ضمن فريق تطوير على نظام ويب داخلي يعتمد على قاعدة بيانات، وشاركت في الواجهات المتجاوبة والاختبار الوظيفي وحل المشكلات.","experience.trainingType":"تطوير مهني","experience.trainingTitle":"تطوير الويب والعمل الحر","experience.trainingText":"تدريب مركز في تطوير تطبيقات الويب وريادة الأعمال والتواصل مع العملاء وتسليم المشاريع.",
-    "contact.label":"تواصل","contact.title":"لديك منتج تريد بناءه؟","contact.text":"متاح للبدء فورًا في فرص مطوّر فل ستاك حول العالم، بما فيها العمل عن بُعد.","footer.location":"غزة، فلسطين"
+    "hero.status":"متاح لفرص العمل عن بُعد","hero.intro":"مرحبًا، أنا كريم","hero.name":"مطوّر فل ستاك<br><em>بعقلية بناء المنتجات.</em>","hero.role":"مطوّر فل ستاك","hero.lead":"أحوّل الأفكار إلى منتجات ويب ثنائية اللغة وموثوقة، من الواجهات المصقولة إلى واجهات البرمجة الآمنة وقواعد البيانات والنشر السحابي.","hero.work":"استعرض أعمالي","hero.cv":"عرض سيرتي الذاتية","hero.follow":"تجدني هنا","hero.location":"غزة، فلسطين","hero.remote":"جاهز للعمل عن بُعد",
+    "metrics.projects":"مشاريع عامة","metrics.training":"تدريب عملي","metrics.bilingual":"منتجات ثنائية اللغة","metrics.graduate":"خريج تكنولوجيا معلومات تطبيقية",
+    "projects.label":"أعمال مختارة","projects.title":"منتجات صُممت لتعمل،<br>لا لتبدو جميلة فقط.","projects.description":"ستة مشاريع عامة تشمل المنصات وأدوات الذكاء الاصطناعي وتجارب الأعمال المتجاوبة، مع نسخ تشغيل وكود ودراسات حالة هندسية.",
+    "expertise.label":"ما الذي أقدمه","expertise.title":"مطوّر واحد.<br>رؤية متكاملة للمنتج.","expertise.description":"أجمع بين التفكير في المنتج والتنفيذ العملي في الواجهات وأنظمة الخادم والبيانات والنشر.","expertise.frontendTitle":"هندسة الواجهات","expertise.frontendText":"React وNext.js وTypeScript، تصميم متجاوب، سهولة وصول وتجارب عربية وإنجليزية باتجاهي RTL وLTR.","expertise.backendTitle":"أنظمة الخادم","expertise.backendText":"Node.js وExpress وLaravel وREST APIs، صلاحيات حسب الدور، جلسات آمنة والتحقق من البيانات.","expertise.dataTitle":"البيانات والسحابة","expertise.dataText":"MySQL وPostgreSQL وSQLite وCloudflare D1/R2 وPrisma وDrizzle وتدفقات بيانات موثوقة.","expertise.deliveryTitle":"تسليم المنتج","expertise.deliveryText":"اختبارات وتعاون باستخدام Git وتوثيق وأداء وتحسين لمحركات البحث وتسليم جاهز للإنتاج.",
+    "experience.label":"المسيرة","experience.title":"أتعلّم ببناء<br>أنظمة حقيقية.","experience.degreeType":"درجة البكالوريوس — المعدل النهائي 81.7%","experience.degreeTitle":"تكنولوجيا المعلومات التطبيقية","experience.degreeText":"جامعة الأقصى، كلية الحاسبات وتكنولوجيا المعلومات. مشروع التخرج: SmartStay AI Palestine.","experience.internType":"متدرب تطوير ويب — 180 ساعة","experience.internTitle":"شركة الكهرباء، خان يونس","experience.internText":"عملت ضمن فريق تطوير على نظام ويب داخلي يعتمد على قاعدة بيانات، وشاركت في الواجهات المتجاوبة والاختبار الوظيفي وحل المشكلات.","experience.trainingType":"تطوير مهني","experience.trainingTitle":"تطوير الويب والعمل الحر","experience.trainingText":"تدريب مركز في تطوير الويب وريادة الأعمال والتواصل مع العملاء وتسليم المشاريع.",
+    "contact.label":"تواصل","contact.title":"لنبنِ شيئًا مفيدًا.","contact.text":"متاح لفرص مطوّر فل ستاك ولمشاريع عمل حر مختارة من مختلف أنحاء العالم.","footer.note":"صُمم بعناية. وبُني بالكود.","footer.back":"العودة للأعلى ↑"
   }
 };
 
@@ -43,6 +43,8 @@ function translatePage(language){
   const toggle=document.getElementById("languageToggle");
   label.textContent=language==="en"?"العربية":"English";
   toggle.setAttribute("aria-label",language==="en"?"Switch to Arabic":"Switch to English");
+  const menu=document.getElementById("menuToggle");
+  if(menu&&!document.body.classList.contains("navOpen")) menu.setAttribute("aria-label",language==="ar"?"فتح القائمة":"Open menu");
   updateThemeControl();
   renderProjects(language);
 }
@@ -61,7 +63,7 @@ function updateThemeControl(){
   const toggle=document.getElementById("themeToggle");
   if(!label||!icon||!toggle)return;
   label.textContent=currentLanguage==="ar"?(dark?"فاتح":"داكن"):(dark?"Light":"Dark");
-  icon.textContent=dark?"☀":"☾";
+  icon.className=dark?"bi bi-sun":"bi bi-moon-stars";
   toggle.setAttribute("aria-label",currentLanguage==="ar"?(dark?"التبديل إلى الوضع الفاتح":"التبديل إلى الوضع الداكن"):(dark?"Switch to light mode":"Switch to dark mode"));
   toggle.setAttribute("aria-pressed",String(dark));
 }
@@ -69,10 +71,13 @@ function updateThemeControl(){
 function renderProjects(language){
   const grid=document.getElementById("projectsGrid");
   const caseStudySlugs=["smartstay","velora","nexora","lexiguard","dozo","electrical"];
-  const words=language==="ar"?{live:"فتح المشروع الكامل",source:"عرض الكود",pending:"يحتاج استضافة Backend","available":"نسخة عامة كاملة متاحة"}:{live:"Open full application",source:"View source",pending:"Backend hosting required",available:"Complete public deployment available"};
+  const words=language==="ar"?{caseStudy:"دراسة الحالة",live:"فتح المشروع",source:"الكود",pending:"يحتاج استضافة Backend",available:"نسخة عامة متاحة"}:{caseStudy:"Case study",live:"Live project",source:"Source",pending:"Backend hosting required",available:"Public deployment available"};
   grid.innerHTML=projects.map((project,index)=>`
-    <article class="projectCard">
-      <div class="projectMedia"><img src="${project.image}" alt="${project.title}" loading="eager" decoding="async"></div>
+    <article class="projectCard" data-reveal>
+      <a class="projectMedia" href="case-studies/${caseStudySlugs[index]}/" aria-label="${words.caseStudy}: ${project.title}">
+        <img src="${project.image}" alt="${project.title}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async">
+        <span class="projectMediaIcon"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+      </a>
       <div class="projectBody">
         <div class="projectTopline"><p class="projectType">${project.type[language]}</p><span class="projectNumber">0${index+1}</span></div>
         <h3>${project.title}</h3><p class="projectDescription">${project.description[language]}</p>
@@ -80,12 +85,34 @@ function renderProjects(language){
         <div class="projectTags">${project.tags.map(tag=>`<span>${tag}</span>`).join("")}</div>
         <p class="projectStatus ${project.live?"live":""}"><span></span>${project.live?words.available:words.pending}</p>
         <div class="projectActions">
-          <a class="caseAction" href="case-studies/${caseStudySlugs[index]}/">${language==="ar"?"دراسة الحالة":"Case study"}</a>
-          ${project.live?`<a class="liveAction" href="${project.live}" target="_blank" rel="noreferrer">${words.live}</a>`:`<span class="disabledAction" aria-disabled="true">${words.pending}</span>`}
-          <a class="sourceAction" href="${project.repo}" target="_blank" rel="noreferrer">${words.source}</a>
+          <a class="caseAction" href="case-studies/${caseStudySlugs[index]}/"><i class="bi bi-journal-code" aria-hidden="true"></i>${words.caseStudy}</a>
+          ${project.live?`<a class="liveAction" href="${project.live}" target="_blank" rel="noreferrer"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>${words.live}</a>`:`<span class="disabledAction" aria-disabled="true">${words.pending}</span>`}
+          <a class="sourceAction" href="${project.repo}" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i>${words.source}</a>
         </div>
       </div>
     </article>`).join("");
+  observeReveals(grid.querySelectorAll("[data-reveal]"));
+}
+
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let revealObserver;
+
+function observeReveals(elements=document.querySelectorAll("[data-reveal]")){
+  if(reduceMotion){
+    elements.forEach(element=>element.classList.add("isVisible"));
+    return;
+  }
+  if(!revealObserver){
+    revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("isVisible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:.12,rootMargin:"0px 0px -45px"});
+  }
+  elements.forEach(element=>revealObserver.observe(element));
 }
 
 document.getElementById("languageToggle").addEventListener("click",()=>{
@@ -96,5 +123,28 @@ document.getElementById("languageToggle").addEventListener("click",()=>{
 
 document.getElementById("themeToggle").addEventListener("click",()=>applyTheme(currentTheme==="dark"?"light":"dark"));
 
+const menuToggle=document.getElementById("menuToggle");
+const closeMenu=()=>{
+  document.body.classList.remove("navOpen");
+  menuToggle.setAttribute("aria-expanded","false");
+};
+
+menuToggle.addEventListener("click",()=>{
+  const open=document.body.classList.toggle("navOpen");
+  menuToggle.setAttribute("aria-expanded",String(open));
+  menuToggle.setAttribute("aria-label",open?(currentLanguage==="ar"?"إغلاق القائمة":"Close menu"):(currentLanguage==="ar"?"فتح القائمة":"Open menu"));
+});
+
+document.querySelectorAll(".navLinks a").forEach(link=>link.addEventListener("click",closeMenu));
+window.addEventListener("resize",()=>{if(window.innerWidth>780)closeMenu();});
+
+if(!reduceMotion && window.matchMedia("(hover: hover)").matches){
+  window.addEventListener("pointermove",event=>{
+    document.documentElement.style.setProperty("--pointer-x",`${event.clientX}px`);
+    document.documentElement.style.setProperty("--pointer-y",`${event.clientY}px`);
+  },{passive:true});
+}
+
 applyTheme(currentTheme);
 translatePage(currentLanguage);
+observeReveals();
