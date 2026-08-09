@@ -31,6 +31,7 @@ body {
 }
 body.navOpen { overflow: hidden; }
 body.storyOpen { overflow: hidden; }
+.section, footer { content-visibility: auto; contain-intrinsic-size: 900px; }
 a { color: inherit; text-decoration: none; }
 button { color: inherit; font: inherit; }
 a:focus-visible,

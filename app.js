@@ -317,6 +317,7 @@ const storyVideo=document.getElementById("storyVideo");
 const openStory=()=>{
   if(typeof storyDialog.showModal==="function")storyDialog.showModal();else storyDialog.setAttribute("open","");
   document.body.classList.add("storyOpen");
+  if(storyVideo.preload==="none"){storyVideo.preload="metadata";storyVideo.load();}
   storyVideo.play().catch(()=>{});
 };
 const closeStory=()=>{
