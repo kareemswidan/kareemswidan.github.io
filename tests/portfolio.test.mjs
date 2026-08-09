@@ -64,6 +64,10 @@ test("CV, portrait and public contact destinations remain available", async () =
   assert.match(home, /github\.com\/kareemswidan/);
   assert.match(home, /mailto:kareemswidan11@gmail\.com/);
   assert.match(home, /bi-envelope/);
+  assert.match(home, /class="hireEmail"/);
+  assert.match(home, />kareemswidan11@gmail\.com</);
+  assert.match(home, /class="formSocials"/);
+  assert.equal((home.match(/class="formSocials"[\s\S]*?<\/div>/g) || []).length, 1);
   assert.doesNotMatch(home, /bi-instagram/);
   assert.match(home, /wa\.me\/972598934925/);
   assert.doesNotMatch(home, /01 \/ 06/);
