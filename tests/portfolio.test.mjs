@@ -61,10 +61,12 @@ test("portfolio publishes professional proof without exposing recommender contac
   assert.doesNotMatch(home + app, /abdelrafe\.elzamly@alaqsa\.edu\.ps/i);
 });
 
-test("portfolio exposes crawlable SEO metadata and the current SmartStay deployment", async () => {
-  const [home, app, robots, sitemap, manifest] = await Promise.all([
+test("portfolio exposes crawlable SEO metadata and current Cloudflare deployments", async () => {
+  const [home, app, studies, electrical, robots, sitemap, manifest] = await Promise.all([
     read("index.html"),
     read("app.js"),
+    read("case-study.js"),
+    read("electrical.html"),
     read("robots.txt"),
     read("sitemap.xml"),
     read("manifest.webmanifest")
@@ -72,6 +74,10 @@ test("portfolio exposes crawlable SEO metadata and the current SmartStay deploym
   assert.match(home, /application\/ld\+json/);
   assert.match(home, /"@type": "ProfilePage"/);
   assert.match(app, /smartstay-palestine\.kareemswidan11\.workers\.dev/);
+  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/velora/);
+  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/nexora/);
+  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/lexiguard/);
+  assert.doesNotMatch(app + studies + electrical, /chatgpt\.site/);
   assert.match(robots, /Sitemap:/);
   assert.match(sitemap, /case-studies\/lexiguard/);
   assert.match(manifest, /Kareem Swidan/);

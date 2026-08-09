@@ -1,4 +1,4 @@
-const labBase = "https://kareem-swidan-dev.kareemswidan050.chatgpt.site";
+const labBase = "https://kareem-product-suite.kareemswidan11.workers.dev";
 const pair = (en, ar) => ({ en, ar });
 
 const studies = {
@@ -71,7 +71,7 @@ const studies = {
       ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/07-customer-portal.png", pair("Customer portal", "بوابة العميل")],
       ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/09-admin-dashboard.png", pair("Platform administration", "إدارة المنصة")]
     ],
-    live: labBase + "/original/velora/index.html",
+    live: labBase + "/velora",
     backend: labBase + "/velora",
     repo: "https://github.com/kareemswidan/velora-mobility-marketplace",
     problem: pair(
@@ -126,7 +126,7 @@ const studies = {
       ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/03-product-en.png", pair("Product details", "تفاصيل المنتج")],
       ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/10-checkout-en.png", pair("Guest checkout", "الدفع كزائر")]
     ],
-    live: labBase + "/original/nexora/index.html",
+    live: labBase + "/nexora",
     backend: labBase + "/nexora",
     repo: "https://github.com/kareemswidan/nexora-laravel",
     problem: pair(
@@ -177,7 +177,7 @@ const studies = {
       [labBase + "/original/lexiguard/index.html", pair("Original multi-page interface", "الواجهة الأصلية متعددة الصفحات")],
       ["../../lexiguard-home.jpg", pair("LexiGuard product identity", "هوية منتج LexiGuard")]
     ],
-    live: labBase + "/original/lexiguard/index.html",
+    live: labBase + "/lexiguard",
     backend: labBase + "/lexiguard",
     repo: "https://github.com/kareemswidan/lexiguard-ai-laravel",
     problem: pair(
