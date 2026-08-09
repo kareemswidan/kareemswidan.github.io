@@ -24,14 +24,14 @@ test("world-class upgrade ships all eight portfolio improvements", async () => {
     read("index.html"),
     read("app.js"),
     read("style.css"),
-    stat(new URL("media/kareem-swidan-showreel-v3.mp4", root))
+    stat(new URL("media/kareem-swidan-showreel-v4.mp4", root))
   ]);
-  await access(new URL("media/kareem-swidan-showreel-v3-poster.jpg", root));
-  await access(new URL("media/kareem-swidan-showreel-v3.ar.vtt", root));
+  await access(new URL("media/kareem-swidan-showreel-v4-poster.jpg", root));
+  await access(new URL("media/kareem-swidan-showreel-v4.ar.vtt", root));
   assert.ok(video.size > 1_000_000, "portfolio story should be a real encoded video");
   assert.match(home, /id="storyDialog"/);
   assert.match(home, /srclang="ar"/);
-  assert.match(home, /1080p · 30fps/);
+  assert.match(home, /1080p · 60fps/);
   assert.match(home, /id="about"/);
   assert.match(home, /class="credibilityRail"/);
   assert.match(home, /class="hireFacts"/);
@@ -57,9 +57,11 @@ test("case studies include the complete engineering evidence model", async () =>
 test("CV, portrait and public contact destinations remain available", async () => {
   const home = await read("index.html");
   await access(new URL("Kareem_Swidan_Full_Stack_CV.pdf", root));
-  await access(new URL("kareem-swidan-v2.jpeg", root));
+  await access(new URL("Kareem_Swidan_ATS_CV.pdf", root));
+  await access(new URL("kareem-swidan-v2.webp", root));
   assert.match(home, /Kareem_Swidan_Full_Stack_CV\.pdf/);
-  assert.match(home, /kareem-swidan-v2\.jpeg/);
+  assert.match(home, /kareem-swidan-v2\.webp/);
+  assert.match(home, /fetchpriority="high"/);
   assert.match(home, /linkedin\.com\/in\/kareem-swidan-21b064263/);
   assert.match(home, /github\.com\/kareemswidan/);
   assert.match(home, /mailto:kareemswidan11@gmail\.com/);
