@@ -168,3 +168,41 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(home, /<link rel="canonical" href="https:\/\/kareemswidan\.github\.io\/">/);
   assert.doesNotMatch(home + robots + sitemap, /github\.io\/kareem-swidan-portfolio/);
 });
+
+test("intrinsic size attributes cannot override the CSS box of an image", async () => {
+  const [home, styles] = await Promise.all([read("index.html"), read("style.css")]);
+
+  // width/height attributes are kept for CLS, but the browser maps them to
+  // presentational hints. Without height:auto the height hint outlives every
+  // author rule that only sets width, aspect-ratio is dropped, and the image
+  // renders at its full intrinsic height.
+  const sized = home.match(/<img[^>]*\bheight="\d+"[^>]*>/g) || [];
+  assert.ok(sized.length > 0, "portrait should keep its intrinsic size attributes");
+  for (const tag of sized) assert.match(tag, /\bwidth="\d+"/, "a height attribute needs its width partner");
+
+  assert.match(styles, /^img \{[^}]*height: auto[^}]*\}/m);
+  assert.match(styles, /^\.portraitCard img \{[^}]*height: auto[^}]*\}/m);
+  assert.match(styles, /^\.portraitCard img \{[^}]*aspect-ratio: 4 \/ 4\.5[^}]*\}/m);
+});
+
+test("contact form reaches Kareem without depending on WhatsApp", async () => {
+  const app = await read("app.js");
+  assert.match(app, /mailto:kareemswidan11@gmail\.com\?subject=/);
+  assert.match(app, /wa\.me\/972598934925\?text=/);
+  // the WhatsApp handoff must never replace the page and strand the visitor
+  assert.doesNotMatch(app, /window\.location\.href=whatsappUrl/);
+  for (const key of ["contact.viaWhatsapp", "contact.viaEmail", "contact.mailSubject"]) {
+    assert.equal((app.match(new RegExp(key.replace(".", "\\."), "g")) || []).length, 3, key + " needs both languages plus its use");
+  }
+});
+
+test("no oversized or orphaned assets ship to production", async () => {
+  const og = await stat(new URL("og.jpg", root));
+  assert.ok(og.size < 300_000, "social card should stay under 300KB, got " + Math.round(og.size / 1024) + "KB");
+  const home = await read("index.html");
+  assert.match(home, /og\.jpg/);
+  assert.doesNotMatch(home, /og\.png/);
+  for (const gone of ["og.png", "kareem-swidan-v2.jpeg", "hero-fullstack-v2.b64", "media/kareem-swidan-showreel-v3.mp4", "media/kareem-swidan-story.mp4"]) {
+    await assert.rejects(access(new URL(gone, root)), gone + " is unreferenced and should not be published");
+  }
+});

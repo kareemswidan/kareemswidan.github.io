@@ -447,11 +447,14 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .contactForm textarea::placeholder { color: #71827e; }
 .contactForm input:focus,
 .contactForm textarea:focus { border-color: var(--accent-bright); background: rgba(6,25,22,.78); box-shadow: 0 0 0 3px rgba(66,216,189,.12); }
-.formFooter { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.formFooter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .formFooter p { min-height: 18px; margin: 0; color: #91a49f; font-size: 9px; line-height: 1.5; }
 .formFooter p.formError { color: #ffaaa2; }
-.formFooter p.formSuccess { color: var(--accent-bright); }
-.formConnect { min-width: 0; display: flex; align-items: center; gap: 10px; }
+.formFooter p.formSuccess { flex: 1 0 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--accent-bright); }
+.formFooter p.formSuccess > span { flex: 1 0 100%; }
+.formFooter p.formSuccess a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid color-mix(in srgb, var(--accent-bright) 42%, transparent); border-radius: 999px; font-size: 10px; font-weight: 800; transition: background-color .2s ease, border-color .2s ease; }
+.formFooter p.formSuccess a:hover { border-color: var(--accent-bright); background: color-mix(in srgb, var(--accent-bright) 16%, transparent); }
+.formConnect { min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .formSocials { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; }
 .formSocials a { width: 33px; height: 33px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; background: rgba(255,255,255,.035); color: #d8e4e1; font-size: 13px; transition: color .2s ease, transform .2s ease, border-color .2s ease, background-color .2s ease; }
 .formSocials a:hover { color: var(--accent-bright); transform: translateY(-3px) rotate(-5deg); border-color: var(--accent-bright); background: rgba(66,216,189,.1); }
@@ -608,6 +611,8 @@ footer a:hover { color: var(--accent); }
   .formFooter { align-items: stretch; flex-direction: column; }
   .formConnect { flex-wrap: wrap; justify-content: center; text-align: center; }
   .formConnect p { width: 100%; }
+  .formFooter p.formSuccess { justify-content: center; }
+  .formFooter p.formSuccess a { padding: 11px 15px; font-size: 11px; }
   .contactSubmit { width: 100%; justify-content: center; }
   .storyDialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); border-radius: 18px; }
   .storyDialogTop { padding: 18px 18px 15px; }
