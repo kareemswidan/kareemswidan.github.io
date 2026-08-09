@@ -32,9 +32,9 @@ test("case studies include the complete engineering evidence model", async () =>
 test("CV, portrait and public contact destinations remain available", async () => {
   const home = await read("index.html");
   await access(new URL("Kareem_Swidan_Full_Stack_CV.pdf", root));
-  await access(new URL("kareem-swidan.jpg", root));
+  await access(new URL("kareem-swidan-v2.jpeg", root));
   assert.match(home, /Kareem_Swidan_Full_Stack_CV\.pdf/);
-  assert.match(home, /kareem-swidan\.jpg/);
+  assert.match(home, /kareem-swidan-v2\.jpeg/);
   assert.match(home, /linkedin\.com\/in\/kareem-swidan-21b064263/);
   assert.match(home, /github\.com\/kareemswidan/);
   assert.match(home, /instagram\.com\/kareem_swidan2002/);
