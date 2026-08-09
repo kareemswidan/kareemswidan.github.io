@@ -262,11 +262,29 @@ function setupNavigationSpy(){
     link.classList.toggle("isActive",active);
     if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current");
   });
-  const observer=new IntersectionObserver(entries=>{
-    const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-    if(visible)setActive(visible.target.id);
-  },{rootMargin:"-24% 0px -58%",threshold:[0,.15,.4,.7]});
-  sections.forEach(section=>observer.observe(section));
+  let ticking=false;
+  const update=()=>{
+    const marker=Math.min(window.innerHeight*.34,260);
+    let current=null;
+    sections.forEach(section=>{
+      if(section.getBoundingClientRect().top<=marker)current=section;
+    });
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-6)current=sections.at(-1)||current;
+    setActive(current?.id||"");
+    ticking=false;
+  };
+  const requestUpdate=()=>{
+    if(ticking)return;
+    ticking=true;
+    requestAnimationFrame(update);
+  };
+  window.addEventListener("scroll",requestUpdate,{passive:true});
+  window.addEventListener("resize",requestUpdate,{passive:true});
+  window.addEventListener("hashchange",requestUpdate);
+  window.addEventListener("load",requestUpdate,{once:true});
+  window.addEventListener("pageshow",requestUpdate,{once:true});
+  requestUpdate();
+  setTimeout(requestUpdate,250);
 }
 
 function setupContactForm(){

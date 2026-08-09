@@ -233,10 +233,6 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .portraitCaption { min-height: 75px; display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 15px 17px 17px; color: var(--on-deep); }
 .portraitCaption span { color: #a8b7b3; font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .portraitCaption strong { font-size: 13px; }
-.portraitSocialDock { position: absolute; inset: auto 50% 66px auto; z-index: 4; display: flex; gap: 7px; padding: 7px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(7,22,20,.72); translate: 50% 50%; box-shadow: 0 16px 36px rgba(0,0,0,.24); backdrop-filter: blur(16px) saturate(140%); }
-.portraitSocialDock a { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #eef8f4; font-size: 14px; transition: transform .25s ease, background-color .25s ease, color .25s ease; }
-.portraitSocialDock a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.portraitSocialDock a:hover { transform: translateY(-4px); background: var(--accent-bright); color: #09211d; }
 .floatingBadge {
   position: absolute;
   display: flex;
@@ -320,6 +316,8 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .compactProject .projectTags span:nth-child(n+5) { display: none; }
 .projectCard[hidden] { display: none !important; }
 .projectsGrid.isFiltered .projectCard:not([hidden]) { grid-column: span 6; display: block; }
+.projectsGrid.isFiltered .featuredProject:first-child .projectMedia { height: 275px; min-height: 0; aspect-ratio: auto; }
+.projectsGrid.isFiltered .featuredProject:first-child .projectBody { display: block; padding: 25px; }
 .projectCard:hover,
 .projectCard:focus-within { transform: translateY(-10px); border-color: color-mix(in srgb, var(--accent) 68%, var(--line)); box-shadow: 0 32px 78px rgba(9,37,33,.18); }
 .projectMedia { position: relative; height: 275px; display: block; overflow: hidden; background: var(--accent-soft); }
@@ -418,15 +416,10 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .hireFacts span { min-height: 34px; display: inline-flex; align-items: center; gap: 7px; padding: 0 11px; border: 1px solid rgba(255,255,255,.11); border-radius: 999px; background: rgba(255,255,255,.04); color: #b6c4c1; font-size: 9px; }
 .hireFacts i { color: var(--accent-bright); }
 .hireFacts b { font-weight: 700; }
-.emailLink { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,.36); font-size: clamp(13px, 1.8vw, 18px); font-weight: 700; transition: color .2s, border-color .2s; }
-.emailLink:hover { border-color: var(--accent-bright); color: var(--accent-bright); }
-.emailLink i { font-size: 11px; }
 .hireActions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .hireActions .button { min-height: 44px; }
 .hirePrimary { border-color: var(--accent-bright); background: var(--accent-bright); color: #09211d; }
-.hireGhost { border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.045); color: var(--on-deep); }
 .hirePrimary:hover { background: #72e6cf; }
-.hireGhost:hover { border-color: var(--accent-bright); color: var(--accent-bright); }
 .contactLinks { display: grid; gap: 8px; }
 .contactLinks a { min-height: 54px; display: grid; grid-template-columns: 25px 1fr 18px; align-items: center; gap: 10px; padding: 0 17px; border: 1px solid rgba(255,255,255,.1); border-radius: 13px; background: rgba(255,255,255,.04); font-size: 11px; transition: transform .25s, border-color .25s, background-color .25s; }
 .contactLinks a:hover { transform: translateX(5px); border-color: rgba(66,216,189,.55); background: rgba(66,216,189,.08); }
@@ -544,6 +537,7 @@ footer a:hover { color: var(--accent); }
   .compactProject,
   .featuredProject:first-child { grid-column: auto; display: block; }
   .featuredProject:first-child .projectMedia { min-height: 0; height: auto; aspect-ratio: 16 / 9; }
+  .projectsGrid.isFiltered .featuredProject:first-child .projectMedia { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
   .compactProject .projectMedia { height: auto; aspect-ratio: 16 / 9; }
   .compactProject .projectFeatures { display: grid; }
   .proofGrid { grid-template-columns: 1fr; }
@@ -603,7 +597,6 @@ footer a:hover { color: var(--accent); }
   .formRow { grid-template-columns: 1fr; }
   .formFooter { align-items: stretch; flex-direction: column; }
   .contactSubmit { width: 100%; justify-content: center; }
-  .portraitSocialDock { bottom: 62px; }
   .storyDialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); border-radius: 18px; }
   .storyDialogTop { padding: 18px 18px 15px; }
   .storyMeta { padding: 13px 16px 17px; }
