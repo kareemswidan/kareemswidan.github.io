@@ -1,0 +1,10 @@
+{
+  "name": "Kareem Swidan — Full-Stack Developer",
+  "short_name": "Kareem Swidan",
+  "description": "Bilingual full-stack developer portfolio and engineering case studies.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f5ef",
+  "theme_color": "#0b1817",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}

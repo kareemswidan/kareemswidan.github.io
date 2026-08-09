@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Kareem Swidan — Full-Stack Developer building bilingual, production-ready web products.">
+  <meta name="author" content="Kareem Swidan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b1817">
+  <link rel="canonical" href="https://kareemswidan.github.io/kareem-swidan-portfolio/">
+  <link rel="alternate" hreflang="en" href="https://kareemswidan.github.io/kareem-swidan-portfolio/">
+  <link rel="alternate" hreflang="ar" href="https://kareemswidan.github.io/kareem-swidan-portfolio/?lang=ar">
+  <link rel="alternate" hreflang="x-default" href="https://kareemswidan.github.io/kareem-swidan-portfolio/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kareem Swidan | Full-Stack Developer">
   <meta property="og:description" content="Bilingual, production-ready web products—from polished interfaces to secure systems and cloud deployment.">
@@ -18,6 +24,8 @@
   <meta name="twitter:description" content="Bilingual, production-ready web products—from polished interfaces to secure systems and cloud deployment.">
   <meta name="twitter:image" content="https://kareemswidan.github.io/kareem-swidan-portfolio/og.png">
   <title>Kareem Swidan | Full-Stack Developer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -26,12 +34,36 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="case-card.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Kareem Swidan — Full-Stack Developer",
+    "url": "https://kareemswidan.github.io/kareem-swidan-portfolio/",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Kareem Swidan",
+      "jobTitle": "Full-Stack Web Developer",
+      "image": "https://kareemswidan.github.io/kareem-swidan-portfolio/kareem-swidan-v2.jpeg",
+      "email": "mailto:kareemswidan11@gmail.com",
+      "telephone": "+972598934925",
+      "address": {"@type": "PostalAddress", "addressLocality": "Gaza", "addressCountry": "PS"},
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Al-Aqsa University"},
+      "knowsLanguage": ["Arabic", "English"],
+      "sameAs": [
+        "https://github.com/kareemswidan",
+        "https://www.linkedin.com/in/kareem-swidan-21b064263/",
+        "https://www.instagram.com/kareem_swidan2002"
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="pageGlow" aria-hidden="true"></div>
 
   <header class="siteHeader">
-    <nav class="shell nav" aria-label="Primary navigation">
+    <nav class="shell nav" aria-label="Primary navigation" data-i18n-aria="aria.primaryNav">
       <a class="brand" href="#top" aria-label="Kareem Swidan home">
         <span class="brandMark">KS</span>
         <span class="brandText">Kareem Swidan</span>
@@ -41,6 +73,7 @@
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#proof" data-i18n="nav.proof">Proof</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
 
@@ -74,7 +107,7 @@
           <a class="button primary" href="#projects"><span data-i18n="hero.work">View selected work</span><i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
           <a class="button ghost" href="Kareem_Swidan_Full_Stack_CV.pdf" target="_blank" rel="noreferrer"><i class="bi bi-file-earmark-person" aria-hidden="true"></i><span data-i18n="hero.cv">View my CV</span></a>
         </div>
-        <div class="socialRow" aria-label="Social profiles">
+        <div class="socialRow" aria-label="Social profiles" data-i18n-aria="aria.socialProfiles">
           <span data-i18n="hero.follow">Find me online</span>
           <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
@@ -97,7 +130,7 @@
       </div>
     </section>
 
-    <section class="metrics shell" aria-label="Profile highlights" data-reveal>
+    <section class="metrics shell" aria-label="Profile highlights" data-i18n-aria="aria.profileHighlights" data-reveal>
       <div><strong>06</strong><span data-i18n="metrics.projects">Public projects</span></div>
       <div><strong>180h</strong><span data-i18n="metrics.training">Industry training</span></div>
       <div><strong>AR / EN</strong><span data-i18n="metrics.bilingual">Bilingual products</span></div>
@@ -147,14 +180,60 @@
       </div>
     </section>
 
+    <section class="proofBand" id="proof">
+      <div class="section shell">
+        <div class="sectionHeader light" data-reveal>
+          <div>
+            <p class="sectionIndex">04 — <span data-i18n="proof.label">Professional proof</span></p>
+            <h2 data-i18n="proof.title">Evidence beyond<br>the interface.</h2>
+          </div>
+          <p data-i18n="proof.description">Working software, automated checks and an academic recommendation make the work easy to evaluate.</p>
+        </div>
+
+        <div class="proofGrid">
+          <article class="recommendationCard" data-reveal>
+            <div class="proofIcon"><i class="bi bi-quote" aria-hidden="true"></i></div>
+            <p class="proofEyebrow" data-i18n="proof.recommendationLabel">Academic recommendation · October 2025</p>
+            <blockquote data-i18n="proof.quote">Kareem demonstrated responsibility, a positive attitude, strong academic performance and consistent commitment throughout his studies.</blockquote>
+            <div class="recommendationAuthor">
+              <span>AE</span>
+              <div><strong>Dr. Abdelrafe Elzamly</strong><small data-i18n="proof.recommenderRole">Department of Computer &amp; Information Sciences, Al-Aqsa University</small></div>
+            </div>
+          </article>
+
+          <article class="verificationCard" data-reveal>
+            <div class="proofIcon"><i class="bi bi-patch-check" aria-hidden="true"></i></div>
+            <p class="proofEyebrow" data-i18n="proof.qualityLabel">Verified quality</p>
+            <h3 data-i18n="proof.qualityTitle">33 automated checks passing</h3>
+            <div class="testMatrix" aria-label="Automated test results" data-i18n-aria="aria.testResults">
+              <span><b>15/15</b> LexiGuard</span><span><b>6/6</b> Velora</span><span><b>5/5</b> SmartStay</span><span><b>4/4</b> Nexora</span><span><b>3/3</b> Electrical</span>
+            </div>
+            <p data-i18n="proof.qualityText">Validated locally on the latest project versions, including production builds where applicable.</p>
+          </article>
+
+          <article class="availabilityCard" data-reveal>
+            <div class="proofIcon"><i class="bi bi-globe2" aria-hidden="true"></i></div>
+            <p class="proofEyebrow" data-i18n="proof.availabilityLabel">Open to opportunities</p>
+            <h3 data-i18n="proof.availabilityTitle">Available worldwide</h3>
+            <ul>
+              <li><i class="bi bi-check2" aria-hidden="true"></i><span data-i18n="proof.fulltime">Full-time roles</span></li>
+              <li><i class="bi bi-check2" aria-hidden="true"></i><span data-i18n="proof.remote">Remote opportunities</span></li>
+              <li><i class="bi bi-check2" aria-hidden="true"></i><span data-i18n="proof.freelance">Selected freelance projects</span></li>
+              <li><i class="bi bi-check2" aria-hidden="true"></i><span data-i18n="proof.languages">Arabic and English products</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="contactSection shell" id="contact" data-reveal>
       <div class="contactCopy">
-        <p class="sectionIndex">04 — <span data-i18n="contact.label">Contact</span></p>
+        <p class="sectionIndex">05 — <span data-i18n="contact.label">Contact</span></p>
         <h2 data-i18n="contact.title">Let's build something useful.</h2>
         <p data-i18n="contact.text">Available for Full-Stack Developer opportunities and selected freelance projects worldwide.</p>
         <a class="emailLink" href="mailto:kareemswidan11@gmail.com">kareemswidan11@gmail.com <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
       </div>
-      <div class="contactLinks" aria-label="Contact links">
+      <div class="contactLinks" aria-label="Contact links" data-i18n-aria="aria.contactLinks">
         <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/kareem_swidan2002" target="_blank" rel="noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
@@ -169,6 +248,6 @@
     <a href="#top" data-i18n="footer.back">Back to top ↑</a>
   </footer>
 
-  <script src="app.js?v=9" defer></script>
+  <script src="app.js?v=11" defer></script>
 </body>
 </html>

@@ -50,3 +50,29 @@ test("portfolio keeps bilingual, theme and motion controls", async () => {
   assert.match(app, /IntersectionObserver/);
   assert.match(styles, /prefers-reduced-motion/);
 });
+
+test("portfolio publishes professional proof without exposing recommender contact data", async () => {
+  const [home, app] = await Promise.all([read("index.html"), read("app.js")]);
+  assert.match(home, /id="proof"/);
+  assert.match(home, /Dr\. Abdelrafe Elzamly/);
+  assert.match(app, /33 automated checks passing/);
+  assert.match(app, /نجاح 33 اختبارًا آليًا/);
+  assert.doesNotMatch(home + app, /\+970\s*59\s*568\s*7828/);
+  assert.doesNotMatch(home + app, /abdelrafe\.elzamly@alaqsa\.edu\.ps/i);
+});
+
+test("portfolio exposes crawlable SEO metadata and the current SmartStay deployment", async () => {
+  const [home, app, robots, sitemap, manifest] = await Promise.all([
+    read("index.html"),
+    read("app.js"),
+    read("robots.txt"),
+    read("sitemap.xml"),
+    read("manifest.webmanifest")
+  ]);
+  assert.match(home, /application\/ld\+json/);
+  assert.match(home, /"@type": "ProfilePage"/);
+  assert.match(app, /smartstay-palestine\.kareemswidan11\.workers\.dev/);
+  assert.match(robots, /Sitemap:/);
+  assert.match(sitemap, /case-studies\/lexiguard/);
+  assert.match(manifest, /Kareem Swidan/);
+});

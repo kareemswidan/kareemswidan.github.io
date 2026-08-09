@@ -32,6 +32,8 @@ body {
 body.navOpen { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button { color: inherit; font: inherit; }
+a:focus-visible,
+button:focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 3px; }
 img { max-width: 100%; }
 .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
 .pageGlow {
@@ -283,6 +285,8 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .projectFeatures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 18px; margin: 18px 0 0; padding: 0; list-style: none; }
 .projectFeatures li { position: relative; padding-inline-start: 14px; color: color-mix(in srgb, var(--ink) 78%, var(--muted)); font-size: 10px; }
 .projectFeatures li::before { content: ""; position: absolute; top: .62em; inset-inline-start: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--accent-bright); }
+.projectEvidence { display: flex; align-items: center; gap: 7px; margin: 16px 0 0; color: var(--accent); font-size: 9px; font-weight: 750; }
+.projectEvidence i { color: var(--accent-bright); font-size: 12px; }
 .projectTags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 19px; }
 .projectTags span { padding: 5px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: 600 8px/1.2 ui-monospace, Consolas, monospace; }
 .projectStatus { display: flex; align-items: center; gap: 7px; margin: 19px 0 0; color: var(--muted); font-size: 9px; }
@@ -316,6 +320,29 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .timeline h3 { margin: 7px 0 8px; font-size: 21px; letter-spacing: -.035em; }
 .timeline article p:last-child { max-width: 720px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .timeline article > i { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent); }
+
+.proofBand { position: relative; overflow: hidden; background: var(--deep); color: var(--on-deep); }
+.proofBand::before { content: ""; position: absolute; width: 620px; height: 620px; bottom: -390px; left: -210px; border-radius: 50%; background: radial-gradient(circle, rgba(66,216,189,.16), transparent 68%); }
+.proofBand .section { position: relative; }
+.proofGrid { display: grid; grid-template-columns: 1.18fr .91fr .91fr; gap: 12px; }
+.proofGrid article { min-width: 0; min-height: 330px; padding: 29px; border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-md); background: rgba(255,255,255,.035); transition: transform .3s, border-color .3s, background-color .3s; }
+.proofGrid article:hover { transform: translateY(-5px); border-color: rgba(66,216,189,.5); background: rgba(255,255,255,.06); }
+.proofIcon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 31px; border-radius: 13px; background: rgba(66,216,189,.12); color: var(--accent-bright); font-size: 18px; }
+.proofEyebrow { margin: 0 0 12px; color: var(--accent-bright); font: 700 9px/1.4 ui-monospace, Consolas, monospace; letter-spacing: .055em; text-transform: uppercase; }
+.recommendationCard blockquote { margin: 0; font-size: clamp(20px, 2.1vw, 28px); font-weight: 650; line-height: 1.45; letter-spacing: -.035em; }
+.recommendationAuthor { display: flex; align-items: center; gap: 12px; margin-top: 30px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); }
+.recommendationAuthor > span { width: 40px; height: 40px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: var(--accent-bright); color: #09211d; font-size: 10px; font-weight: 900; }
+.recommendationAuthor div { min-width: 0; display: grid; gap: 4px; }
+.recommendationAuthor strong { font-size: 11px; }
+.recommendationAuthor small { color: #9fb0ac; font-size: 9px; line-height: 1.5; }
+.verificationCard h3, .availabilityCard h3 { margin: 0; font-size: 24px; letter-spacing: -.04em; }
+.verificationCard > p:last-child { margin: 24px 0 0; color: #9fb0ac; font-size: 10px; line-height: 1.7; }
+.testMatrix { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; margin-top: 24px; }
+.testMatrix span { min-width: 0; padding: 10px; border: 1px solid rgba(255,255,255,.09); border-radius: 10px; color: #aab8b5; font-size: 9px; }
+.testMatrix b { display: block; margin-bottom: 3px; color: var(--on-deep); font-size: 12px; }
+.availabilityCard ul { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+.availabilityCard li { display: flex; align-items: center; gap: 9px; color: #b3c1be; font-size: 10px; }
+.availabilityCard li i { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: rgba(66,216,189,.12); color: var(--accent-bright); }
 
 .contactSection { display: grid; grid-template-columns: 1.06fr .94fr; gap: 90px; align-items: center; margin-bottom: 95px; padding: 58px; border-radius: var(--radius-lg); background: var(--deep); color: var(--on-deep); }
 .contactCopy h2 { max-width: 580px; margin: 15px 0 16px; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.12; letter-spacing: -.055em; }
@@ -354,6 +381,9 @@ footer a:hover { color: var(--accent); }
   .badgeOne { left: -22px; }
   [dir="rtl"] .badgeOne { right: -22px; }
   .sectionHeader { gap: 45px; }
+  .proofGrid { grid-template-columns: 1.1fr .9fr; }
+  .availabilityCard { grid-column: 1 / -1; min-height: auto !important; }
+  .availabilityCard ul { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .contactSection { gap: 45px; padding: 46px; }
 }
 
@@ -388,6 +418,8 @@ footer a:hover { color: var(--accent); }
   .metrics div:nth-child(3) { padding-inline-start: 0; }
   .sectionHeader { grid-template-columns: 1fr; gap: 20px; }
   .projectsGrid { grid-template-columns: 1fr; }
+  .proofGrid { grid-template-columns: 1fr; }
+  .availabilityCard { grid-column: auto; }
   .projectMedia { height: auto; aspect-ratio: 16 / 9; }
   .contactSection { grid-template-columns: 1fr; }
 }
@@ -422,6 +454,9 @@ footer a:hover { color: var(--accent); }
   .projectActions a, .projectActions .disabledAction { flex: 1 1 calc(50% - 4px); }
   .expertiseGrid { grid-template-columns: 1fr; }
   .expertiseGrid article { min-height: 220px; padding: 25px; }
+  .proofGrid article { min-height: auto; padding: 24px; }
+  .recommendationCard blockquote { font-size: 20px; }
+  .availabilityCard ul { grid-template-columns: 1fr; }
   .timeline article { grid-template-columns: 1fr 40px; gap: 13px 18px; }
   .timeline time { grid-column: 1; }
   .timeline article > div { grid-column: 1; }
