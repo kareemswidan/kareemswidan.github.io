@@ -60,8 +60,21 @@ test("CV, portrait and public contact destinations remain available", async () =
   assert.match(home, /kareem-swidan-v2\.jpeg/);
   assert.match(home, /linkedin\.com\/in\/kareem-swidan-21b064263/);
   assert.match(home, /github\.com\/kareemswidan/);
-  assert.match(home, /instagram\.com\/kareem_swidan2002/);
+  assert.match(home, /mailto:kareemswidan11@gmail\.com/);
+  assert.match(home, /bi-envelope/);
+  assert.doesNotMatch(home, /bi-instagram/);
   assert.match(home, /wa\.me\/972598934925/);
+  assert.doesNotMatch(home, /01 \/ 06/);
+});
+
+test("all six projects use optimized original device mockups", async () => {
+  const app = await read("app.js");
+  for (const slug of slugs) {
+    const asset = `media/project-mockups/${slug}-mockup.webp`;
+    await access(new URL(asset, root));
+    assert.match(app, new RegExp(asset.replace(/[/.]/g, "\\$&")));
+  }
+  assert.equal((app.match(/width="1600" height="900"/g) || []).length, 1);
 });
 
 test("portfolio keeps bilingual, theme and motion controls", async () => {
@@ -72,6 +85,43 @@ test("portfolio keeps bilingual, theme and motion controls", async () => {
   assert.match(app, /portfolioTheme/);
   assert.match(app, /IntersectionObserver/);
   assert.match(styles, /prefers-reduced-motion/);
+});
+
+test("interactive portfolio layer includes the eight requested premium upgrades", async () => {
+  const [home, app, styles] = await Promise.all([read("index.html"), read("app.js"), read("style.css")]);
+
+  assert.match(home, /class="projectFilters"/);
+  assert.equal((home.match(/data-project-filter=/g) || []).length, 4);
+  assert.match(app, /projectCategories/);
+  assert.match(app, /applyProjectFilter/);
+
+  assert.match(home, /id="contactForm"/);
+  assert.match(home, /name="name"/);
+  assert.match(home, /name="email"/);
+  assert.match(home, /name="message"/);
+  assert.match(app, /setupContactForm/);
+  assert.match(app, /wa\.me\/972598934925\?text=/);
+
+  assert.match(home, /class="techRail"/);
+  assert.match(styles, /@keyframes techRail/);
+  assert.equal((home.match(/class="expertiseGrid"/g) || []).length, 1);
+  assert.equal((home.match(/expertise\.(?:frontend|backend|data|delivery|cloud|quality)Title/g) || []).length, 6);
+
+  assert.match(home, /data-count="6"/);
+  assert.match(home, /data-count="33"/);
+  assert.match(app, /animateProofCounters/);
+  assert.match(styles, /\.projectCard:focus-within/);
+
+  assert.doesNotMatch(home, /class="portraitSocialDock"/);
+  assert.match(app, /setupNavigationSpy/);
+  assert.match(app, /aria-current/);
+  assert.match(styles, /\.projectsGrid\.isFiltered \.featuredProject:first-child \.projectMedia/);
+  assert.doesNotMatch(home, /class="emailLink"/);
+  assert.doesNotMatch(home, />Download CV</);
+
+  for (const key of ["projects.filterAll", "expertise.cloudTitle", "contact.formTitle"]) {
+    assert.ok((app.match(new RegExp(key.replace(".", "\\."), "g")) || []).length >= 2, `${key} should exist in both languages`);
+  }
 });
 
 test("portfolio publishes professional proof without exposing recommender contact data", async () => {
