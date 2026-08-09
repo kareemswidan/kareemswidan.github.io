@@ -37,6 +37,9 @@ button { color: inherit; font: inherit; }
 a:focus-visible,
 button:focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 3px; }
 img { max-width: 100%; height: auto; }
+.skipLink { position: fixed; z-index: 100; top: -100px; inset-inline-start: 12px; padding: 11px 16px; border-radius: 999px; background: var(--deep); color: var(--on-deep); font-size: 11px; font-weight: 800; transition: top .2s ease; }
+.skipLink:focus { top: 12px; }
+main:focus { outline: none; }
 .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
 .pageGlow {
   position: fixed;
@@ -463,6 +466,7 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 footer { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
 footer a { font-weight: 800; transition: color .2s; }
 footer a:hover { color: var(--accent); }
+.footerLinks { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
 
 .storyDialog { width: min(1120px, calc(100% - 34px)); max-height: calc(100dvh - 34px); padding: 0; overflow: auto; border: 1px solid color-mix(in srgb, var(--accent) 45%, #2b403c); border-radius: 24px; background: #061613; color: #eff8f4; box-shadow: 0 38px 120px rgba(0,0,0,.55); }
 .storyDialog::backdrop { background: rgba(1,10,9,.82); backdrop-filter: blur(10px); }

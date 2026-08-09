@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="case-card.css">
   <script type="application/ld+json">
@@ -61,6 +61,7 @@
   </script>
 </head>
 <body>
+  <a class="skipLink" href="#top" data-i18n="nav.skip">Skip to content</a>
   <div class="pageGlow" aria-hidden="true"></div>
 
   <header class="siteHeader">
@@ -98,7 +99,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="hero shell">
       <div class="heroCopy" data-reveal>
         <p class="status"><span aria-hidden="true"></span><span data-i18n="hero.status">Available for remote opportunities</span></p>
@@ -323,9 +324,13 @@
   <footer class="shell">
     <span>&copy; 2026 Kareem Swidan</span>
     <span data-i18n="footer.note">Designed with care. Built with code.</span>
+    <span class="footerLinks">
+      <a href="cv.html" data-i18n="footer.cvWeb">CV (web)</a>
+      <a href="Kareem_Swidan_ATS_CV.pdf" target="_blank" rel="noreferrer" data-i18n="footer.cvAts">ATS CV (PDF)</a>
+    </span>
     <a href="#top" data-i18n="footer.back">Back to top ↑</a>
   </footer>
 
-  <script src="app.js?v=17" defer></script>
+  <script src="app.js?v=18" defer></script>
 </body>
 </html>

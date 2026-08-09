@@ -206,3 +206,31 @@ test("no oversized or orphaned assets ship to production", async () => {
     await assert.rejects(access(new URL(gone, root)), gone + " is unreferenced and should not be published");
   }
 });
+
+test("every published page and document is reachable", async () => {
+  const [home, app, cv, sitemap, styles] = await Promise.all([
+    read("index.html"), read("app.js"), read("cv.html"), read("sitemap.xml"), read("style.css")
+  ]);
+
+  // keyboard users hit the whole nav before the content; the target needs tabindex
+  // or the browser scrolls without moving focus
+  assert.match(home, /class="skipLink" href="#top"/);
+  assert.match(home, /<main id="top" tabindex="-1">/);
+  assert.match(styles, /\.skipLink:focus \{[^}]*top: 12px/);
+
+  // cv.html and the ATS CV shipped but nothing on the site linked to them
+  assert.match(home, /href="cv\.html"/);
+  assert.match(home, /href="Kareem_Swidan_ATS_CV\.pdf"/);
+  assert.match(sitemap, /<loc>https:\/\/kareemswidan\.github\.io\/cv\.html<\/loc>/);
+
+  // cv.html was a dead end with no metadata and no way back
+  assert.match(cv, /<link rel="canonical" href="https:\/\/kareemswidan\.github\.io\/cv\.html">/);
+  assert.match(cv, /<meta name="description"/);
+  assert.match(cv, /href="\.\/"/);
+  assert.match(cv, /href="Kareem_Swidan_Full_Stack_CV\.pdf"/);
+  assert.match(cv, /href="Kareem_Swidan_ATS_CV\.pdf"/);
+
+  for (const key of ["nav.skip", "footer.cvWeb", "footer.cvAts"]) {
+    assert.equal((app.match(new RegExp('"' + key.replace(".", "\\.") + '"', "g")) || []).length, 2, key + " needs both languages");
+  }
+});
