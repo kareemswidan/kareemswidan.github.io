@@ -420,6 +420,10 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .hireActions .button { min-height: 44px; }
 .hirePrimary { border-color: var(--accent-bright); background: var(--accent-bright); color: #09211d; }
 .hirePrimary:hover { background: #72e6cf; }
+.hireEmail { min-height: 44px; display: inline-flex; align-items: center; gap: 9px; padding: 0 6px; color: #d7e4e1; font-size: 11px; font-weight: 750; letter-spacing: -.015em; transition: color .22s ease, transform .22s ease; }
+.hireEmail i { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; color: var(--accent-bright); transition: border-color .22s ease, background-color .22s ease, transform .22s ease; }
+.hireEmail:hover { color: var(--accent-bright); transform: translateY(-2px); }
+.hireEmail:hover i { border-color: var(--accent-bright); background: rgba(66,216,189,.1); transform: rotate(-7deg); }
 .contactLinks { display: grid; gap: 8px; }
 .contactLinks a { min-height: 54px; display: grid; grid-template-columns: 25px 1fr 18px; align-items: center; gap: 10px; padding: 0 17px; border: 1px solid rgba(255,255,255,.1); border-radius: 13px; background: rgba(255,255,255,.04); font-size: 11px; transition: transform .25s, border-color .25s, background-color .25s; }
 .contactLinks a:hover { transform: translateX(5px); border-color: rgba(66,216,189,.55); background: rgba(66,216,189,.08); }
@@ -446,6 +450,10 @@ body.navOpen .menuToggle span:last-child { translate: 0 0; transform: rotate(-45
 .formFooter p { min-height: 18px; margin: 0; color: #91a49f; font-size: 9px; line-height: 1.5; }
 .formFooter p.formError { color: #ffaaa2; }
 .formFooter p.formSuccess { color: var(--accent-bright); }
+.formConnect { min-width: 0; display: flex; align-items: center; gap: 10px; }
+.formSocials { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; }
+.formSocials a { width: 33px; height: 33px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; background: rgba(255,255,255,.035); color: #d8e4e1; font-size: 13px; transition: color .2s ease, transform .2s ease, border-color .2s ease, background-color .2s ease; }
+.formSocials a:hover { color: var(--accent-bright); transform: translateY(-3px) rotate(-5deg); border-color: var(--accent-bright); background: rgba(66,216,189,.1); }
 .contactSubmit { min-height: 43px; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border: 0; border-radius: 999px; background: var(--accent-bright); color: #09211d; cursor: pointer; font-size: 9px; font-weight: 850; transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease; }
 .contactSubmit:hover { transform: translateY(-3px); background: #72e6cf; box-shadow: 0 12px 25px rgba(66,216,189,.18); }
 footer { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
@@ -593,9 +601,12 @@ footer a:hover { color: var(--accent); }
   .contactSection { width: calc(100% - 24px); gap: 35px; margin-block: 64px 55px; padding: 34px 22px; border-radius: 22px; }
   .contactCopy h2 { font-size: 34px; }
   .hireActions .button { flex: 1 1 100%; }
+  .hireEmail { width: 100%; justify-content: center; }
   .contactForm { padding: 18px; }
   .formRow { grid-template-columns: 1fr; }
   .formFooter { align-items: stretch; flex-direction: column; }
+  .formConnect { flex-wrap: wrap; justify-content: center; text-align: center; }
+  .formConnect p { width: 100%; }
   .contactSubmit { width: 100%; justify-content: center; }
   .storyDialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); border-radius: 18px; }
   .storyDialogTop { padding: 18px 18px 15px; }

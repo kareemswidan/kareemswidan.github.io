@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=14">
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="case-card.css">
   <script type="application/ld+json">
@@ -280,6 +280,7 @@
         </div>
         <div class="hireActions">
           <a href="mailto:kareemswidan11@gmail.com?subject=Full-Stack%20opportunity%20for%20Kareem" class="button hirePrimary"><span data-i18n="contact.hire">Hire Kareem</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          <a class="hireEmail" href="mailto:kareemswidan11@gmail.com" aria-label="Email Kareem at kareemswidan11@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i><span>kareemswidan11@gmail.com</span></a>
         </div>
       </div>
       <form class="contactForm" id="contactForm" novalidate>
@@ -289,7 +290,18 @@
           <label><span data-i18n="contact.email">Email</span><input id="contactEmail" name="email" type="email" autocomplete="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@example.com"></label>
         </div>
         <label><span data-i18n="contact.message">Project or opportunity</span><textarea id="contactMessage" name="message" rows="4" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tell me what you would like to build..."></textarea></label>
-        <div class="formFooter"><p id="contactStatus" role="status" aria-live="polite"></p><button class="contactSubmit" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i><span data-i18n="contact.send">Continue in WhatsApp</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></button></div>
+        <div class="formFooter">
+          <div class="formConnect">
+            <div class="formSocials" aria-label="Social profiles" data-i18n-aria="aria.socialProfiles">
+              <a href="https://github.com/kareemswidan" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/kareem-swidan-21b064263/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+              <a href="mailto:kareemswidan11@gmail.com" aria-label="Email Kareem" title="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+              <a href="https://wa.me/972598934925" target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <p id="contactStatus" role="status" aria-live="polite"></p>
+          </div>
+          <button class="contactSubmit" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i><span data-i18n="contact.send">Continue in WhatsApp</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+        </div>
       </form>
     </section>
   </main>
