@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kareemswidan.github.io/kareem-swidan-portfolio/sitemap.xml
+Sitemap: https://kareemswidan.github.io/sitemap.xml
