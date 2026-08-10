@@ -11,7 +11,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,4 +19,10 @@ jobs:
           node-version: 20
       - run: node --check app.js
       - run: node --check case-study.js
+      # content and metadata checks — no dependencies, runs anywhere
       - run: npm test
+      # layout checks — measure the rendered boxes in a real browser, because a
+      # correct-looking CSS rule is not proof that the box came out right
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:layout

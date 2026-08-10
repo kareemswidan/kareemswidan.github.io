@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/portfolio.test.mjs"
+    "test": "node --test tests/portfolio.test.mjs",
+    "test:layout": "node --test tests/layout.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
   }
 }
