@@ -12,7 +12,7 @@ const studies = {
     role: pair("Full-stack developer within the graduation-project team", "مطوّر Full-Stack ضمن فريق مشروع التخرج"),
     team: pair("Team graduation project", "مشروع تخرج جماعي"),
     status: pair("Public full-stack deployment", "نسخة Full-Stack عامة"),
-    image: "https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/01-home-english.png",
+    image: "../../media/case-heroes/smartstay",
     gallery: [
       ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/12-owner-dashboard.png", pair("Property-owner dashboard", "لوحة مالك العقار")],
       ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/16-admin-dashboard.png", pair("Administration dashboard", "لوحة الإدارة")]
@@ -66,7 +66,7 @@ const studies = {
     role: pair("Product design and full-stack development", "تصميم المنتج وتطوير Full-Stack"),
     team: pair("Individual project", "مشروع فردي"),
     status: pair("Original UI + public backend lab", "التصميم الأصلي + Backend عام"),
-    image: "../../velora-home.png",
+    image: "../../media/case-heroes/velora",
     gallery: [
       ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/07-customer-portal.png", pair("Customer portal", "بوابة العميل")],
       ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/09-admin-dashboard.png", pair("Platform administration", "إدارة المنصة")]
@@ -121,7 +121,7 @@ const studies = {
     role: pair("Product design and full-stack development", "تصميم المنتج وتطوير Full-Stack"),
     team: pair("Individual project", "مشروع فردي"),
     status: pair("Original UI + persistent order lab", "التصميم الأصلي + طلبات محفوظة"),
-    image: "https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/01-home-en.png",
+    image: "../../media/case-heroes/nexora",
     gallery: [
       ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/03-product-en.png", pair("Product details", "تفاصيل المنتج")],
       ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/10-checkout-en.png", pair("Guest checkout", "الدفع كزائر")]
@@ -172,7 +172,7 @@ const studies = {
     role: pair("Product design and full-stack development", "تصميم المنتج وتطوير Full-Stack"),
     team: pair("Individual project", "مشروع فردي"),
     status: pair("Original UI + public secure backend", "التصميم الأصلي + Backend آمن"),
-    image: "../../lexiguard-home.jpg",
+    image: "../../media/case-heroes/lexiguard",
     gallery: [
       [labBase + "/original/lexiguard/index.html", pair("Original multi-page interface", "الواجهة الأصلية متعددة الصفحات")],
       ["../../lexiguard-home.jpg", pair("LexiGuard product identity", "هوية منتج LexiGuard")]
@@ -223,7 +223,7 @@ const studies = {
     role: pair("Product design and full-stack development", "تصميم المنتج وتطوير Full-Stack"),
     team: pair("Individual project", "مشروع فردي"),
     status: pair("Public multi-page full-stack demo", "تجربة Full-Stack عامة متعددة الصفحات"),
-    image: "../../dozo-home.jpg",
+    image: "../../media/case-heroes/dozo",
     gallery: [
       [labBase + "/original/dozo/html/index.html", pair("DOZO public website", "موقع DOZO العام")],
       [labBase + "/original/dozo/html/sign-up.html", pair("Account creation journey", "مسار إنشاء الحساب")]
@@ -273,7 +273,7 @@ const studies = {
     role: pair("Design and front-end development", "التصميم وتطوير الواجهة"),
     team: pair("Individual project", "مشروع فردي"),
     status: pair("Public static deployment", "نسخة Static عامة"),
-    image: "https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/screenshots/desktop-home.png",
+    image: "../../media/case-heroes/electrical",
     gallery: [
       ["https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/screenshots/mobile-home.png", pair("Responsive mobile experience", "تجربة الهاتف المتجاوبة")],
       ["https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/images/hero-electrical-control.png", pair("Original product photography", "صورة المنتج الأصلية")]
@@ -383,7 +383,7 @@ function render() {
   document.body.innerHTML =
     '<header class="caseHeader"><nav class="shell caseNav"><a class="backLink" href="../../index.html#projects">' + t.back + '</a><div class="navTools"><button id="languageToggle">' + t.language + '</button><button id="themeToggle">' + (theme === "dark" ? t.themeLight : t.themeDark) + '</button></div></nav></header>' +
     '<main><section class="shell caseHero"><p class="eyebrow">' + pick(study.kicker) + '</p><h1>' + study.title + '</h1><p class="heroSummary">' + pick(study.summary) + '</p><div class="heroActions"><a class="primary" href="' + study.live + '" target="_blank" rel="noreferrer">' + t.live + '</a>' + (study.backend ? '<a href="' + study.backend + '" target="_blank" rel="noreferrer">' + t.backend + '</a>' : '') + '<a href="' + study.repo + '" target="_blank" rel="noreferrer">' + t.source + '</a></div><div class="factStrip"><div><span>' + t.type + '</span><strong>' + pick(study.kicker).split("·")[0] + '</strong></div><div><span>' + t.role + '</span><strong>' + pick(study.role) + '</strong></div><div><span>' + t.team + '</span><strong>' + pick(study.team) + '</strong></div><div><span>' + t.status + '</span><strong>' + pick(study.status) + '</strong></div></div></section>' +
-    '<div class="heroMedia"><img src="' + study.image + '" alt="' + study.title + ' interface"></div>' +
+    '<div class="heroMedia"><img src="' + study.image + '-1280.webp" srcset="' + study.image + '-1280.webp 1280w, ' + study.image + '-2560.webp 2560w" sizes="(max-width: 1304px) calc(100vw - 24px), 1280px" fetchpriority="high" alt="' + study.title + ' interface"></div>' +
     '<section class="caseSection"><div class="shell sectionGrid"><p class="sectionLabel">' + t.overview + '</p><div class="sectionContent"><h2>' + t.problem + '</h2><p>' + pick(study.problem) + '</p><div class="roleCard"><div><span>' + t.role + '</span><strong>' + pick(study.role) + '</strong></div><div><span>' + t.team + '</span><strong>' + pick(study.team) + '</strong></div></div><p>' + pick(study.roleText) + '</p></div></div></section>' +
     '<section class="caseSection"><div class="shell sectionGrid"><p class="sectionLabel">' + t.architecture + '</p><div class="sectionContent"><h2>' + t.architectureTitle + '</h2><div class="architecture">' + architecture + '</div><h3>' + t.stack + '</h3><div class="stackGrid">' + stack + '</div></div></div></section>' +
     '<section class="caseSection"><div class="shell sectionGrid"><p class="sectionLabel">' + t.challenges + '</p><div class="sectionContent"><h2>' + t.challengesTitle + '</h2><div class="challengeList">' + challenges + '</div></div></div></section>' +

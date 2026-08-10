@@ -114,6 +114,42 @@ test("the skip link is the first tab stop and moves into view when focused", asy
   await page.close();
 });
 
+test("every case study renders, and its hero has the pixels a retina screen asks for", async () => {
+  const slugs = ["smartstay", "velora", "nexora", "lexiguard", "dozo", "electrical"];
+  for (const slug of slugs) {
+    // deviceScaleFactor 2 so srcset resolves the way it would on a real laptop.
+    // The heroes used to be ~1425px sources in a 1280px box — soft on every
+    // retina display, which is what the whole re-shoot was about.
+    const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
+    const consoleErrors = [];
+    page.on("console", (m) => { if (m.type() === "error") consoleErrors.push(m.text().slice(0, 120)); });
+    await page.goto(new URL(`../case-studies/${slug}/index.html`, import.meta.url).href, { waitUntil: "load" });
+    await page.waitForSelector(".caseHero", { timeout: 15000 });
+
+    const r = await page.evaluate(() => {
+      const hero = document.querySelector(".heroMedia img");
+      const box = hero.getBoundingClientRect();
+      return {
+        h1: document.querySelectorAll("h1").length,
+        chose: hero.currentSrc.split("/").pop(),
+        needed: Math.round(box.width * devicePixelRatio),
+        broken: [...document.querySelectorAll("img")].filter((i) => i.complete && i.naturalWidth === 0).length,
+        noAlt: [...document.querySelectorAll("img")].filter((i) => !i.getAttribute("alt")).length,
+      };
+    });
+
+    assert.equal(r.h1, 1, `${slug}: expected exactly one h1`);
+    assert.equal(r.broken, 0, `${slug}: broken images`);
+    assert.equal(r.noAlt, 0, `${slug}: images without alt text`);
+    assert.deepEqual(consoleErrors, [], `${slug}: console errors`);
+
+    const picked = Number((r.chose.match(/-(\d+)\.webp$/) || [])[1] || 0);
+    assert.ok(picked >= r.needed * 0.95,
+      `${slug}: hero served ${picked}px for a screen needing ${r.needed}px (${r.chose})`);
+    await page.close();
+  }
+});
+
 test("submitting the contact form offers both a WhatsApp and an email route", async () => {
   const page = await open(1280, 900);
   await page.fill("#contactForm [name=name]", "Recruiter Example");
