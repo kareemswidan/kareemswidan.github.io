@@ -37,7 +37,7 @@ test("world-class upgrade ships all eight portfolio improvements", async () => {
   assert.match(home, /id="about"/);
   assert.match(home, /class="credibilityRail"/);
   assert.match(home, /class="hireFacts"/);
-  assert.match(home, /data-count="23"/);
+  assert.match(home, /data-count="24"/);
   assert.match(app, /projectOutcomes/);
   assert.match(app, /featuredProject/);
   assert.match(app, /setupProjectMotion/);
@@ -121,7 +121,7 @@ test("interactive portfolio layer includes the eight requested premium upgrades"
   assert.equal((home.match(/expertise\.(?:frontend|backend|data|delivery|cloud|quality)Title/g) || []).length, 6);
 
   assert.match(home, /data-count="6"/);
-  assert.match(home, /data-count="23"/);
+  assert.match(home, /data-count="24"/);
   assert.match(app, /animateProofCounters/);
   assert.match(styles, /\.projectCard:focus-within/);
 
@@ -141,8 +141,8 @@ test("portfolio publishes professional proof without exposing recommender contac
   const [home, app] = await Promise.all([read("index.html"), read("app.js")]);
   assert.match(home, /id="proof"/);
   assert.match(home, /Dr\. Abdelrafe Elzamly/);
-  assert.match(app, /23 automated checks passing/);
-  assert.match(app, /نجاح 23 اختبارًا آليًا/);
+  assert.match(app, /24 automated checks passing/);
+  assert.match(app, /نجاح 24 اختبارًا آليًا/);
   assert.doesNotMatch(home + app, /\+970\s*59\s*568\s*7828/);
   assert.doesNotMatch(home + app, /abdelrafe\.elzamly@alaqsa\.edu\.ps/i);
 });
@@ -283,4 +283,16 @@ test("a sent contact form puts the visitor on the send action", async () => {
   assert.match(app, /prefers-reduced-motion: reduce/);
   // and it still must not depend on WhatsApp being installed
   assert.match(app, /mailLink/);
+});
+
+test("every project states its evidence as a count somebody can reproduce", async () => {
+  // DOZO used to read "Auth, sessions and persistence verified" while its repo
+  // ran no tests at all. A word cannot be checked; a ratio can.
+  const app = await read("app.js");
+  const claims = [...app.matchAll(/title:"([^"]+)"[\s\S]{0,1500}?evidence:\{en:"([^"]*)",ar:"([^"]*)"/g)];
+  assert.equal(claims.length, 6, "every project card needs an evidence claim");
+  for (const [, title, en, ar] of claims) {
+    assert.match(en, /^\d+\/\d+ /, title + " must lead with a count in English");
+    assert.match(ar, /\d+\/\d+/, title + " must carry the same count in Arabic");
+  }
 });
