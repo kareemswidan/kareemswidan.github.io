@@ -123,8 +123,33 @@ test("every case study renders, and its hero has the pixels a retina screen asks
     const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
     const consoleErrors = [];
     page.on("console", (m) => { if (m.type() === "error") consoleErrors.push(m.text().slice(0, 120)); });
+
+    // A bare "Failed to load resource" tells you nothing about which resource,
+    // and this suite spent three CI runs failing on a different case study each
+    // time. Record the URL, and hold only our own files to the assertion: the
+    // page asks Google Fonts for two stylesheets, that host throttles CI
+    // runners, and the text still renders through font-display: swap.
+    const ourFailures = [];
+    const theirFailures = [];
+    const record = (url, why) => {
+      (url.startsWith("file://") ? ourFailures : theirFailures).push(`${why} ${url}`);
+    };
+    page.on("response", (r) => { if (r.status() >= 400) record(r.url(), r.status()); });
+    page.on("requestfailed", (r) => record(r.url(), (r.failure()?.errorText) || "failed"));
     await page.goto(new URL(`../case-studies/${slug}/index.html`, import.meta.url).href, { waitUntil: "load" });
     await page.waitForSelector(".caseHero", { timeout: 15000 });
+
+    // The gallery figures are loading="lazy" and sit below the fold, so they
+    // were never fetched here: deleting one of them still passed this test.
+    // Force them in and wait, or the galleries go unchecked.
+    await page.evaluate(() => {
+      document.querySelectorAll("img[loading=lazy]").forEach((i) => { i.loading = "eager"; });
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+    await page.waitForFunction(
+      () => [...document.querySelectorAll("img")].every((i) => i.complete),
+      null, { timeout: 15000 }
+    );
 
     const r = await page.evaluate(() => {
       const hero = document.querySelector(".heroMedia img");
@@ -141,7 +166,10 @@ test("every case study renders, and its hero has the pixels a retina screen asks
     assert.equal(r.h1, 1, `${slug}: expected exactly one h1`);
     assert.equal(r.broken, 0, `${slug}: broken images`);
     assert.equal(r.noAlt, 0, `${slug}: images without alt text`);
-    assert.deepEqual(consoleErrors, [], `${slug}: console errors`);
+    assert.deepEqual(ourFailures, [], `${slug}: this repo failed to serve a file`);
+    // console errors that are not a third-party fetch we already accounted for
+    const ours = theirFailures.length ? consoleErrors.filter((m) => !/Failed to load resource/.test(m)) : consoleErrors;
+    assert.deepEqual(ours, [], `${slug}: console errors (third-party: ${theirFailures.join("; ") || "none"})`);
 
     const picked = Number((r.chose.match(/-(\d+)\.webp$/) || [])[1] || 0);
     assert.ok(picked >= r.needed * 0.95,
