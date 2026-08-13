@@ -37,7 +37,7 @@ test("world-class upgrade ships all eight portfolio improvements", async () => {
   assert.match(home, /id="about"/);
   assert.match(home, /class="credibilityRail"/);
   assert.match(home, /class="hireFacts"/);
-  assert.match(home, /data-count="33"/);
+  assert.match(home, /data-count="23"/);
   assert.match(app, /projectOutcomes/);
   assert.match(app, /featuredProject/);
   assert.match(app, /setupProjectMotion/);
@@ -121,7 +121,7 @@ test("interactive portfolio layer includes the eight requested premium upgrades"
   assert.equal((home.match(/expertise\.(?:frontend|backend|data|delivery|cloud|quality)Title/g) || []).length, 6);
 
   assert.match(home, /data-count="6"/);
-  assert.match(home, /data-count="33"/);
+  assert.match(home, /data-count="23"/);
   assert.match(app, /animateProofCounters/);
   assert.match(styles, /\.projectCard:focus-within/);
 
@@ -141,8 +141,8 @@ test("portfolio publishes professional proof without exposing recommender contac
   const [home, app] = await Promise.all([read("index.html"), read("app.js")]);
   assert.match(home, /id="proof"/);
   assert.match(home, /Dr\. Abdelrafe Elzamly/);
-  assert.match(app, /33 automated checks passing/);
-  assert.match(app, /نجاح 33 اختبارًا آليًا/);
+  assert.match(app, /23 automated checks passing/);
+  assert.match(app, /نجاح 23 اختبارًا آليًا/);
   assert.doesNotMatch(home + app, /\+970\s*59\s*568\s*7828/);
   assert.doesNotMatch(home + app, /abdelrafe\.elzamly@alaqsa\.edu\.ps/i);
 });
@@ -240,4 +240,47 @@ test("every published page and document is reachable", async () => {
   for (const key of ["nav.skip", "footer.cvWeb", "footer.cvAts"]) {
     assert.equal((app.match(new RegExp('"' + key.replace(".", "\\.") + '"', "g")) || []).length, 2, key + " needs both languages");
   }
+});
+
+test("the published check count is the number of checks that actually run", async () => {
+  // "33 automated checks" was a hand-tallied cross-project sum. Nobody could
+  // reproduce it from this repo, in the one section that asks to be verified.
+  const [app, home, suite, layout] = await Promise.all([
+    read("app.js"), read("index.html"),
+    read("tests/portfolio.test.mjs"), read("tests/layout.test.mjs")
+  ]);
+  const count = (source) => (source.match(/^test\(/gm) || []).length;
+  const content = count(suite);
+  const browser = count(layout);
+  const total = content + browser;
+
+  assert.match(home, new RegExp('data-count="' + total + '">' + total + '<'));
+  assert.match(app, new RegExp('"' + total + ' automated checks passing"'));
+  assert.match(app, new RegExp("نجاح " + total + " اختبارًا آليًا"));
+  assert.match(app, new RegExp('"' + content + " content and metadata checks plus " + browser + " browser layout checks"));
+  assert.match(app, new RegExp('"' + content + " اختبار محتوى وبيانات وصفية و" + browser + " اختبارات تخطيط"));
+});
+
+test("Arabic leads its own font stack instead of falling through Manrope", async () => {
+  const styles = await read("style.css");
+  // Manrope carries no Arabic glyphs, so every Arabic glyph was arriving by
+  // fallback. In RTL the Arabic face has to be the one that is asked for.
+  assert.match(styles, /\[dir="rtl"\] body \{[^}]*font-family: "IBM Plex Sans Arabic", Manrope/);
+});
+
+test("footer links keep a touch-sized hit area on phones", async () => {
+  const styles = await read("style.css");
+  // 9px footer text gave the CV and back-to-top links a 15px tall target
+  const mobile = styles.slice(styles.indexOf("@media (max-width: 560px)"));
+  assert.match(mobile, /footer a \{[^}]*min-height: 44px/);
+});
+
+test("a sent contact form puts the visitor on the send action", async () => {
+  const app = await read("app.js");
+  // the prefilled links used to append silently below the fold
+  assert.match(app, /whatsappLink\.focus\(\)/);
+  assert.match(app, /whatsappLink\.scrollIntoView/);
+  assert.match(app, /prefers-reduced-motion: reduce/);
+  // and it still must not depend on WhatsApp being installed
+  assert.match(app, /mailLink/);
 });
