@@ -156,9 +156,14 @@ test("interactive portfolio layer includes the eight requested premium upgrades"
 test("portfolio publishes professional proof without exposing recommender contact data", async () => {
   const [home, app] = await Promise.all([read("index.html"), read("app.js")]);
   assert.match(home, /id="proof"/);
-  assert.match(home, /Dr\. Abdelrafe Elzamly/);
+  assert.match(home, /Hassan M\. Dawoud/);
   assert.match(app, /24 automated checks passing/);
   assert.match(app, /نجاح 24 اختبارًا آليًا/);
+  // Each letter arrives with a personal mobile, a university address and a
+  // signature. None of them add credibility, and publishing them costs the
+  // recommender a scraped inbox and a forgeable signature. Name and role only.
+  assert.doesNotMatch(home + app, /\+?970\s*59\s*213\s*9246/);
+  assert.doesNotMatch(home + app, /hassan@alaqsa\.edu\.ps/i);
   assert.doesNotMatch(home + app, /\+970\s*59\s*568\s*7828/);
   assert.doesNotMatch(home + app, /abdelrafe\.elzamly@alaqsa\.edu\.ps/i);
 });
