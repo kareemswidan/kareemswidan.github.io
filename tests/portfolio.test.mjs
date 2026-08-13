@@ -80,7 +80,8 @@ test("CV, portrait and public contact destinations remain available", async () =
   assert.match(home, /Kareem_Swidan_Full_Stack_CV\.pdf/);
   assert.match(home, /kareem-swidan-v2\.webp/);
   assert.match(home, /fetchpriority="high"/);
-  assert.match(home, /linkedin\.com\/in\/kareem-swidan-21b064263/);
+  assert.match(home, /linkedin\.com\/in\/kareem-swidan\//);
+  assert.doesNotMatch(home, /kareem-swidan-21b064263/);
   assert.match(home, /github\.com\/kareemswidan/);
   assert.match(home, /mailto:kareemswidan11@gmail\.com/);
   assert.match(home, /bi-envelope/);
