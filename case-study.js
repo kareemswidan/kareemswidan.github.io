@@ -14,8 +14,8 @@ const studies = {
     status: pair("Public full-stack deployment", "نسخة Full-Stack عامة"),
     image: "../../media/case-heroes/smartstay",
     gallery: [
-      ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/12-owner-dashboard.png", pair("Property-owner dashboard", "لوحة مالك العقار")],
-      ["https://raw.githubusercontent.com/kareemswidan/smartstay-ai-palestine/main/docs/screenshots/16-admin-dashboard.png", pair("Administration dashboard", "لوحة الإدارة")]
+      ["../../media/case-screens/smartstay-owner-dashboard.webp", pair("Property-owner dashboard", "لوحة مالك العقار")],
+      ["../../media/case-screens/smartstay-admin-dashboard.webp", pair("Administration dashboard", "لوحة الإدارة")]
     ],
     live: "https://smartstay-palestine.kareemswidan11.workers.dev/",
     repo: "https://github.com/kareemswidan/smartstay-ai-palestine",
@@ -68,8 +68,8 @@ const studies = {
     status: pair("Original UI + public backend lab", "التصميم الأصلي + Backend عام"),
     image: "../../media/case-heroes/velora",
     gallery: [
-      ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/07-customer-portal.png", pair("Customer portal", "بوابة العميل")],
-      ["https://raw.githubusercontent.com/kareemswidan/velora-mobility-marketplace/main/docs/screenshots/09-admin-dashboard.png", pair("Platform administration", "إدارة المنصة")]
+      ["../../media/case-screens/velora-customer-portal.webp", pair("Customer portal", "بوابة العميل")],
+      ["../../media/case-screens/velora-admin-dashboard.webp", pair("Platform administration", "إدارة المنصة")]
     ],
     live: labBase + "/velora",
     backend: labBase + "/velora",
@@ -123,8 +123,8 @@ const studies = {
     status: pair("Original UI + persistent order lab", "التصميم الأصلي + طلبات محفوظة"),
     image: "../../media/case-heroes/nexora",
     gallery: [
-      ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/03-product-en.png", pair("Product details", "تفاصيل المنتج")],
-      ["https://raw.githubusercontent.com/kareemswidan/nexora-laravel/main/docs/screenshots/10-checkout-en.png", pair("Guest checkout", "الدفع كزائر")]
+      ["../../media/case-screens/nexora-product-details.webp", pair("Product details", "تفاصيل المنتج")],
+      ["../../media/case-screens/nexora-guest-checkout.webp", pair("Guest checkout", "الدفع كزائر")]
     ],
     live: labBase + "/nexora",
     backend: labBase + "/nexora",
@@ -275,8 +275,8 @@ const studies = {
     status: pair("Public static deployment", "نسخة Static عامة"),
     image: "../../media/case-heroes/electrical",
     gallery: [
-      ["https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/screenshots/mobile-home.png", pair("Responsive mobile experience", "تجربة الهاتف المتجاوبة")],
-      ["https://raw.githubusercontent.com/kareemswidan/kareem-swidan-electrical/main/images/hero-electrical-control.png", pair("Original product photography", "صورة المنتج الأصلية")]
+      ["../../media/case-screens/electrical-mobile-home.webp", pair("Responsive mobile experience", "تجربة الهاتف المتجاوبة")],
+      ["../../media/case-screens/electrical-product-photo.webp", pair("Original product photography", "صورة المنتج الأصلية")]
     ],
     live: labBase + "/demos/electrical/index.html",
     repo: "https://github.com/kareemswidan/kareem-swidan-electrical",
