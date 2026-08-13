@@ -272,6 +272,11 @@ test("the published check count is the number of checks that actually run", asyn
 
   assert.match(home, new RegExp('data-count="' + total + '">' + total + '<'));
   assert.match(app, new RegExp('"' + total + ' automated checks passing"'));
+  // The <h3> carries the same sentence as static markup. The script rewrites it
+  // on load, so a stale number here is invisible in a browser and still served
+  // to crawlers and to view-source. It drifted to 33 exactly that way.
+  assert.match(home, new RegExp('data-i18n="proof.qualityTitle">' + total + ' automated checks passing<'));
+  assert.doesNotMatch(home, /\b33 automated checks/);
   assert.match(app, new RegExp("نجاح " + total + " اختبارًا آليًا"));
   assert.match(app, new RegExp('"' + content + " content and metadata checks plus " + browser + " browser layout checks"));
   assert.match(app, new RegExp('"' + content + " اختبار محتوى وبيانات وصفية و" + browser + " اختبارات تخطيط"));
