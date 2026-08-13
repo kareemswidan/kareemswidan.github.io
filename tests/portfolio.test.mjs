@@ -20,13 +20,29 @@ test("portfolio links every project to an independent case study", async () => {
 });
 
 test("world-class upgrade ships all eight portfolio improvements", async () => {
-  const [home, app, styles, video] = await Promise.all([
+  const [home, app, styles] = await Promise.all([
     read("index.html"),
     read("app.js"),
-    read("style.css"),
-    stat(new URL("media/kareem-swidan-showreel-v6.mp4", root))
+    read("style.css")
   ]);
-  await access(new URL("media/kareem-swidan-showreel-v6-poster.jpg", root));
+
+  // Derive the cut under test from the page rather than naming one here, so the
+  // test can never demand a different build than the site actually serves.
+  const source = home.match(/<source src="(media\/kareem-swidan-showreel-v(\d+)\.mp4)"/);
+  assert.ok(source, "index.html must reference an encoded showreel");
+  const poster = home.match(/poster="(media\/kareem-swidan-showreel-v\d+-poster\.jpg)"/);
+  assert.ok(poster, "the showreel must ship a poster frame");
+
+  // v7-v13 and v16-v18 built their opening from another creator's footage and
+  // must never reach production. v6 and v15 are the clean cuts.
+  const borrowed = [7, 8, 9, 10, 11, 12, 13, 16, 17, 18];
+  assert.ok(!borrowed.includes(Number(source[2])),
+    `showreel v${source[2]} is built on borrowed footage and cannot be published`);
+  assert.equal(poster[1], source[1].replace(".mp4", "-poster.jpg"),
+    "the poster must belong to the cut being served");
+
+  const video = await stat(new URL(source[1], root));
+  await access(new URL(poster[1], root));
   assert.ok(video.size > 1_000_000, "portfolio story should be a real encoded video");
   assert.match(home, /id="storyDialog"/);
   // Arabic is burned into the frame; a same-language <track> would double every line
