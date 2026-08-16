@@ -183,7 +183,7 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(home, /application\/ld\+json/);
   assert.match(home, /"@type": "ProfilePage"/);
   assert.match(app, /smartstay-palestine\.kareemswidan11\.workers\.dev/);
-  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/velora/);
+  assert.match(app, /velora-mobility\.kareemswidan11\.workers\.dev/);
   assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/nexora/);
   assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/lexiguard/);
   assert.doesNotMatch(app + studies + electrical, /chatgpt\.site/);
