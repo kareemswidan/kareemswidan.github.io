@@ -124,10 +124,11 @@ const studies = {
     image: "../../media/case-heroes/nexora",
     gallery: [
       ["../../media/case-screens/nexora-product-details.webp", pair("Product details", "تفاصيل المنتج")],
-      ["../../media/case-screens/nexora-guest-checkout.webp", pair("Guest checkout", "الدفع كزائر")]
+      ["../../media/case-screens/nexora-guest-checkout.webp", pair("Guest checkout", "الدفع كزائر")],
+      ["https://kareemswidan.github.io/demos/nexora/", pair("Full application walkthrough (16 pages)", "جولة كاملة داخل التطبيق (16 صفحة)")]
     ],
-    live: labBase + "/nexora",
-    backend: labBase + "/nexora",
+    live: "https://kareemswidan.github.io/demos/nexora/",
+    backend: "https://kareemswidan.github.io/demos/nexora/",
     repo: "https://github.com/kareemswidan/nexora-laravel",
     problem: pair(
       "The goal was to prove an end-to-end marketplace flow, not a landing-page mockup: visitors must discover a product, keep a cart, complete checkout, receive an order number, and retrieve the same order safely.",

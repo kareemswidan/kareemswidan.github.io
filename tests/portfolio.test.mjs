@@ -184,7 +184,7 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(home, /"@type": "ProfilePage"/);
   assert.match(app, /smartstay-palestine\.kareemswidan11\.workers\.dev/);
   assert.match(app, /velora-mobility\.kareemswidan11\.workers\.dev/);
-  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/nexora/);
+  assert.match(app, /kareemswidan\.github\.io\/demos\/nexora\//);
   assert.match(app, /kareemswidan\.github\.io\/demos\/lexiguard\//);
   assert.doesNotMatch(app + studies + electrical, /chatgpt\.site/);
   // Case-study galleries used to hotlink raw.githubusercontent.com. It is rate
