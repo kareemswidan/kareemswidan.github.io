@@ -227,10 +227,12 @@ const studies = {
     status: pair("Public multi-page full-stack demo", "تجربة Full-Stack عامة متعددة الصفحات"),
     image: "../../media/case-heroes/dozo",
     gallery: [
-      [labBase + "/original/dozo/html/index.html", pair("DOZO public website", "موقع DOZO العام")],
-      [labBase + "/original/dozo/html/sign-up.html", pair("Account creation journey", "مسار إنشاء الحساب")]
+      ["../../media/case-screens/dozo-landing.webp", pair("Arabic-first landing page", "الصفحة الرئيسية بواجهة عربية")],
+      ["../../media/case-screens/dozo-workspace.webp", pair("Client workspace", "مساحة عمل العميل")],
+      ["../../media/case-screens/dozo-ai-brief.webp", pair("Generated AI project brief", "مخرجات المستشار الذكي")],
+      ["https://kareemswidan.github.io/demos/dozo/", pair("Full application walkthrough (9 pages)", "جولة كاملة داخل التطبيق (9 صفحات)")]
     ],
-    live: labBase + "/original/dozo/html/index.html",
+    live: "https://kareemswidan.github.io/demos/dozo/",
     repo: "https://github.com/kareemswidan/dozoo",
     problem: pair(
       "A product studio needs to turn a vague idea into a structured brief while also proving that its public website, account journey, and client workspace are one connected product.",

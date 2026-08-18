@@ -1,0 +1,118 @@
+.artical {
+  height: 50vh;
+  min-height: 400px;
+  background-size: cover;
+  background-image: url("../images/slider-BG.png");
+}
+
+.Articletitle {
+  color: #416399;
+  text-decoration: none;
+}
+
+.articalName {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.articalCard {
+  background-image: linear-gradient(55deg, #7e81bc 1%, #416399);
+  border: 0 #416399;
+  color: white;
+  width: 350px;
+  height: 250px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: linear-gradient(55deg, #656bda 1%, #416399);
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-control-prev-icon {
+  position: relative;
+  right: 5rem;
+}
+
+.carousel-control-next-icon {
+  position: relative;
+  left: 8rem;
+}
+
+.who {
+  color: #18427c;
+  font-weight: 700;
+}
+
+.card-title {
+  margin: 0px 0px 35px;
+  padding: 0px 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.articalblock {
+  display: inline-block;
+  width: 540px;
+  height: 480px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  padding: 10px;
+  border: 2px solid #416399;
+  border-radius: 16px;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
+  text-align: right;
+}
+
+.articalblock img {
+  width: 100%;
+  height: 225px;
+  border-radius: 16px;
+}
+
+.readMore {
+  text-align: center;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.readMore2 {
+  background-color: #18427c;
+  color: white;
+  margin-bottom: 5px;
+
+}
+
+@media (max-width: 767px) {
+  .articalblock {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    height: 75vh;
+    margin-top: 5px;
+
+  }
+
+  .allarticals {
+    display: none;
+  }
+
+  .readMore2 {
+
+    margin-top: 5px;
+  }
+}
