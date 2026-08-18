@@ -1,2 +1,0 @@
-const root=document.documentElement,button=document.querySelector('#themeToggle');button?.addEventListener('click',()=>{const dark=root.dataset.theme!=='dark';root.dataset.theme=dark?'dark':'light';localStorage.setItem('nexora-theme',dark?'dark':'light');button.innerHTML=dark?'<span>☀</span><b>Light</b>':'<span>☾</span><b>Dark</b>'});const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.07});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-

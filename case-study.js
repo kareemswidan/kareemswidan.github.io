@@ -125,10 +125,10 @@ const studies = {
     gallery: [
       ["../../media/case-screens/nexora-product-details.webp", pair("Product details", "تفاصيل المنتج")],
       ["../../media/case-screens/nexora-guest-checkout.webp", pair("Guest checkout", "الدفع كزائر")],
-      ["https://kareemswidan.github.io/demos/nexora/", pair("Full application walkthrough (16 pages)", "جولة كاملة داخل التطبيق (16 صفحة)")]
+      ["https://kareemswidan.github.io/nexora-laravel/", pair("Full application walkthrough (16 pages)", "جولة كاملة داخل التطبيق (16 صفحة)")]
     ],
-    live: "https://kareemswidan.github.io/demos/nexora/",
-    backend: "https://kareemswidan.github.io/demos/nexora/",
+    live: "https://kareemswidan.github.io/nexora-laravel/",
+    backend: "https://kareemswidan.github.io/nexora-laravel/",
     repo: "https://github.com/kareemswidan/nexora-laravel",
     problem: pair(
       "The goal was to prove an end-to-end marketplace flow, not a landing-page mockup: visitors must discover a product, keep a cart, complete checkout, receive an order number, and retrieve the same order safely.",
@@ -178,10 +178,10 @@ const studies = {
       ["../../media/case-screens/lexiguard-dashboard.webp", pair("Contract intelligence dashboard", "لوحة تحليل العقود")],
       ["../../media/case-screens/lexiguard-risk-analysis.webp", pair("Risk and obligations analysis", "تحليل المخاطر والالتزامات")],
       ["../../media/case-screens/lexiguard-arabic-chat.webp", pair("Arabic document assistant", "المساعد الذكي بالعربية")],
-      ["https://kareemswidan.github.io/demos/lexiguard/", pair("Full application walkthrough (29 pages)", "جولة كاملة داخل التطبيق (29 صفحة)")]
+      ["https://kareemswidan.github.io/lexiguard-ai-laravel/", pair("Full application walkthrough (29 pages)", "جولة كاملة داخل التطبيق (29 صفحة)")]
     ],
-    live: "https://kareemswidan.github.io/demos/lexiguard/",
-    backend: "https://kareemswidan.github.io/demos/lexiguard/",
+    live: "https://kareemswidan.github.io/lexiguard-ai-laravel/",
+    backend: "https://kareemswidan.github.io/lexiguard-ai-laravel/",
     repo: "https://github.com/kareemswidan/lexiguard-ai-laravel",
     problem: pair(
       "Document analysis products handle sensitive files, so a convincing demo must do more than display a score. It needs real accounts, private ownership, validated uploads, extractable text, explainable findings, and safe deletion.",
@@ -231,9 +231,9 @@ const studies = {
       ["../../media/case-screens/dozo-landing.webp", pair("Arabic-first landing page", "الصفحة الرئيسية بواجهة عربية")],
       ["../../media/case-screens/dozo-workspace.webp", pair("Client workspace", "مساحة عمل العميل")],
       ["../../media/case-screens/dozo-ai-brief.webp", pair("Generated AI project brief", "مخرجات المستشار الذكي")],
-      ["https://kareemswidan.github.io/demos/dozo/", pair("Full application walkthrough (9 pages)", "جولة كاملة داخل التطبيق (9 صفحات)")]
+      ["https://kareemswidan.github.io/dozoo/", pair("Full application walkthrough (9 pages)", "جولة كاملة داخل التطبيق (9 صفحات)")]
     ],
-    live: "https://kareemswidan.github.io/demos/dozo/",
+    live: "https://kareemswidan.github.io/dozoo/",
     repo: "https://github.com/kareemswidan/dozoo",
     problem: pair(
       "A product studio needs to turn a vague idea into a structured brief while also proving that its public website, account journey, and client workspace are one connected product.",
