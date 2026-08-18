@@ -174,8 +174,10 @@ const studies = {
     status: pair("Original UI + public secure backend", "التصميم الأصلي + Backend آمن"),
     image: "../../media/case-heroes/lexiguard",
     gallery: [
-      ["https://kareemswidan.github.io/demos/lexiguard/", pair("Full application walkthrough (29 pages)", "جولة كاملة داخل التطبيق (29 صفحة)")],
-      ["../../lexiguard-home.jpg", pair("LexiGuard product identity", "هوية منتج LexiGuard")]
+      ["../../media/case-screens/lexiguard-dashboard.webp", pair("Contract intelligence dashboard", "لوحة تحليل العقود")],
+      ["../../media/case-screens/lexiguard-risk-analysis.webp", pair("Risk and obligations analysis", "تحليل المخاطر والالتزامات")],
+      ["../../media/case-screens/lexiguard-arabic-chat.webp", pair("Arabic document assistant", "المساعد الذكي بالعربية")],
+      ["https://kareemswidan.github.io/demos/lexiguard/", pair("Full application walkthrough (29 pages)", "جولة كاملة داخل التطبيق (29 صفحة)")]
     ],
     live: "https://kareemswidan.github.io/demos/lexiguard/",
     backend: "https://kareemswidan.github.io/demos/lexiguard/",
@@ -371,7 +373,7 @@ function render() {
     return '<article><strong>' + pick(item[0]) + '</strong><p>' + pick(item[1]) + '</p></article>';
   }).join("");
   const gallery = study.gallery.map(function (item) {
-    const isPage = item[0].includes("/original/");
+    const isPage = !/\.(webp|jpe?g|png|gif|avif|svg)$/i.test(item[0]);
     return '<figure>' + (isPage ? '<a href="' + item[0] + '" target="_blank" rel="noreferrer"><div class="galleryPage">↗ ' + pick(item[1]) + '</div></a>' : '<img src="' + item[0] + '" alt="' + pick(item[1]) + '" loading="lazy"><figcaption>' + pick(item[1]) + '</figcaption>') + '</figure>';
   }).join("");
   const evidence = study.evidence.map(function (item) {
