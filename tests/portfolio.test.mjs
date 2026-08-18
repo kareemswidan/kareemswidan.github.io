@@ -185,7 +185,7 @@ test("portfolio exposes crawlable SEO metadata and current Cloudflare deployment
   assert.match(app, /smartstay-palestine\.kareemswidan11\.workers\.dev/);
   assert.match(app, /velora-mobility\.kareemswidan11\.workers\.dev/);
   assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/nexora/);
-  assert.match(app, /kareem-product-suite\.kareemswidan11\.workers\.dev\/lexiguard/);
+  assert.match(app, /kareemswidan\.github\.io\/demos\/lexiguard\//);
   assert.doesNotMatch(app + studies + electrical, /chatgpt\.site/);
   // Case-study galleries used to hotlink raw.githubusercontent.com. It is rate
   // limited, so a random case study 404'd and reddened CI on most runs.

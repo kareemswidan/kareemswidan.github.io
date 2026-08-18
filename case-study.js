@@ -174,11 +174,11 @@ const studies = {
     status: pair("Original UI + public secure backend", "التصميم الأصلي + Backend آمن"),
     image: "../../media/case-heroes/lexiguard",
     gallery: [
-      [labBase + "/original/lexiguard/index.html", pair("Original multi-page interface", "الواجهة الأصلية متعددة الصفحات")],
+      ["https://kareemswidan.github.io/demos/lexiguard/", pair("Full application walkthrough (29 pages)", "جولة كاملة داخل التطبيق (29 صفحة)")],
       ["../../lexiguard-home.jpg", pair("LexiGuard product identity", "هوية منتج LexiGuard")]
     ],
-    live: labBase + "/lexiguard",
-    backend: labBase + "/lexiguard",
+    live: "https://kareemswidan.github.io/demos/lexiguard/",
+    backend: "https://kareemswidan.github.io/demos/lexiguard/",
     repo: "https://github.com/kareemswidan/lexiguard-ai-laravel",
     problem: pair(
       "Document analysis products handle sensitive files, so a convincing demo must do more than display a score. It needs real accounts, private ownership, validated uploads, extractable text, explainable findings, and safe deletion.",
