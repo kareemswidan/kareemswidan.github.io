@@ -1,4 +1,3 @@
-const labBase = "https://kareem-product-suite.kareemswidan11.workers.dev";
 const pair = (en, ar) => ({ en, ar });
 
 const studies = {
@@ -71,8 +70,8 @@ const studies = {
       ["../../media/case-screens/velora-customer-portal.webp", pair("Customer portal", "بوابة العميل")],
       ["../../media/case-screens/velora-admin-dashboard.webp", pair("Platform administration", "إدارة المنصة")]
     ],
-    live: labBase + "/velora",
-    backend: labBase + "/velora",
+    live: "https://velora-mobility.kareemswidan11.workers.dev",
+    backend: "https://velora-mobility.kareemswidan11.workers.dev",
     repo: "https://github.com/kareemswidan/velora-mobility-marketplace",
     problem: pair(
       "Mobility services are usually split across maps, calls, store visits, and disconnected booking tools. The product needed one discovery and operations layer without losing ownership boundaries.",
