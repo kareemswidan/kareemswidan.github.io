@@ -283,7 +283,7 @@ const studies = {
       ["../../media/case-screens/electrical-mobile-home.webp", pair("Responsive mobile experience", "تجربة الهاتف المتجاوبة")],
       ["../../media/case-screens/electrical-product-photo.webp", pair("Original product photography", "صورة المنتج الأصلية")]
     ],
-    live: labBase + "/demos/electrical/index.html",
+    live: "https://kareemswidan.github.io/kareem-swidan-electrical/",
     repo: "https://github.com/kareemswidan/kareem-swidan-electrical",
     problem: pair(
       "A local electrical supplier needs customers to find the right category and contact the business quickly. A heavy account system would add cost without helping that job.",
